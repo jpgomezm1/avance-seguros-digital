@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -69,12 +69,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-nunito;
+    @apply bg-background text-foreground font-opensans;
     font-size: 16px;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat font-bold;
+    @apply font-poppins font-bold leading-tight;
   }
 }
 
@@ -84,23 +85,27 @@
   }
 
   .btn-primary {
-    @apply bg-avance-blue text-white hover:bg-opacity-90 rounded-md px-6 py-3 font-medium transition-all;
+    @apply bg-avance-blue text-white hover:bg-opacity-90 rounded-md px-6 py-3 font-medium transition-all inline-flex items-center justify-center;
   }
 
   .btn-secondary {
-    @apply bg-avance-gold text-white hover:bg-opacity-90 rounded-md px-6 py-3 font-medium transition-all;
+    @apply bg-avance-gold text-white hover:bg-opacity-90 rounded-md px-6 py-3 font-medium transition-all inline-flex items-center justify-center;
+  }
+
+  .btn-outline {
+    @apply border border-avance-blue text-avance-blue hover:bg-avance-blue hover:text-white rounded-md px-6 py-3 font-medium transition-all inline-flex items-center justify-center;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-avance-blue;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-avance-blue;
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl font-semibold mb-4 text-avance-blue;
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-avance-blue;
   }
 
   .insurance-icon {
-    @apply p-4 bg-white rounded-full border-4 border-avance-lightblue flex items-center justify-center w-20 h-20 mx-auto mb-4;
+    @apply p-4 bg-white rounded-full border-4 border-avance-lightblue flex items-center justify-center w-20 h-20;
   }
 
   .hero-overlay {
@@ -109,5 +114,55 @@
 }
 
 .text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-soft {
+  background: linear-gradient(135deg, #EBF2F5 0%, #FFFFFF 100%);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #0A4958 0%, #1a6980 100%);
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #C69C3F 0%, #e0b858 100%);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

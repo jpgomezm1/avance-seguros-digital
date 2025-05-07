@@ -65,20 +65,29 @@ export default {
 				},
 				// Colores personalizados de Avance Seguros
 				avance: {
-					blue: '#0A4958',
+					blue: '#0A4958', 
+					"blue-light": '#1a6980',
+					"blue-dark": '#053642',
 					gold: '#C69C3F',
+					"gold-light": '#e0b858',
+					"gold-dark": '#a27c32',
 					lightblue: '#EBF2F5',
 					gray: '#F5F5F5',
 				},
 			},
 			fontFamily: {
-				montserrat: ['Montserrat', 'sans-serif'],
-				nunito: ['Nunito', 'sans-serif'],
+				poppins: ['Poppins', 'sans-serif'],
+				opensans: ['Open Sans', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'soft': '0 10px 25px -3px rgba(0, 0, 0, 0.05)',
+				'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
+				'elevated': '0 20px 40px -10px rgba(0, 0, 0, 0.1)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -105,12 +114,22 @@ export default {
 					'0%': { opacity: '1', transform: 'translateY(0)' },
 					'100%': { opacity: '0', transform: 'translateY(10px)' }
 				},
+				'slide-in': {
+					'0%': { opacity: '0', transform: 'translateX(-20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'fade-out': 'fade-out 0.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out',
 			}
 		}
 	},
