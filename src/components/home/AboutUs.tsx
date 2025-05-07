@@ -1,76 +1,182 @@
-
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, Award, Clock, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AboutUs = () => {
   const benefits = [
-    'Asesoría personalizada según tus necesidades',
-    'Análisis comparativo de múltiples aseguradoras',
-    'Más de 12 años de experiencia en el mercado',
-    'Respaldo de las mejores compañías de seguros',
-    'Acompañamiento durante todo el proceso de reclamación',
+    {
+      text: 'Asesoría personalizada según tus necesidades',
+      icon: Users,
+      color: 'text-avance-gold'
+    },
+    {
+      text: 'Análisis comparativo de múltiples aseguradoras',
+      icon: Award,
+      color: 'text-avance-blue'
+    },
+    {
+      text: 'Más de 12 años de experiencia en el mercado',
+      icon: Clock,
+      color: 'text-avance-gold'
+    },
+    {
+      text: 'Respaldo de las mejores compañías de seguros',
+      icon: Shield,
+      color: 'text-avance-blue'
+    },
+    {
+      text: 'Acompañamiento durante todo el proceso de reclamación',
+      icon: CheckCircle,
+      color: 'text-avance-gold'
+    },
   ];
 
+  // Variantes para animaciones
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <section className="py-24 bg-gradient-to-b from-avance-lightblue to-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute -top-64 -right-64 w-[500px] h-[500px] rounded-full border-[40px] border-avance-gold/5"></div>
-      <div className="absolute -bottom-40 -left-40 w-[300px] h-[300px] rounded-full border-[30px] border-avance-blue/5"></div>
+    <section className="py-24 bg-gradient-to-b from-[#f5f9fa] to-white relative overflow-hidden">
+      {/* Elementos decorativos mejorados */}
+      <div className="absolute -top-64 -right-64 w-[500px] h-[500px] rounded-full border-[40px] border-avance-gold/5 blur-sm"></div>
+      <div className="absolute -bottom-40 -left-40 w-[300px] h-[300px] rounded-full border-[30px] border-avance-blue/5 blur-sm"></div>
+      <div className="absolute top-1/3 left-1/4 w-16 h-16 rounded-full bg-avance-gold/5"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-20 h-20 rounded-full bg-avance-blue/5"></div>
       
       <div className="container-custom relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <span className="text-avance-blue font-semibold mb-3 inline-block">NUESTRA HISTORIA</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-avance-blue leading-tight">
-              Expertos en encontrar la <span className="text-avance-gold">mejor protección</span> para ti
-            </h2>
-            <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          {/* Columna de texto */}
+          <motion.div 
+            className="lg:col-span-6 order-2 lg:order-1"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={containerVariants}
+          >
+            <motion.div variants={itemVariants}>
+              <span className="inline-block bg-avance-blue/10 text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">QUIÉNES SOMOS</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-avance-blue leading-tight">
+                Expertos en encontrar la <span className="text-avance-gold relative">
+                  mejor protección
+                  <span className="absolute bottom-1 left-0 w-full h-1 bg-avance-gold/20 rounded-full"></span>
+                </span> para ti
+              </h2>
+            </motion.div>
+            
+            <motion.p 
+              variants={itemVariants}
+              className="text-gray-700 mb-8 text-lg leading-relaxed"
+            >
               En Avance Seguros utilizamos la información y necesidades de nuestros clientes para obtener la mejor opción del mercado y establecer comparativos que brinden productos verdaderamente personalizados.
-            </p>
+            </motion.p>
             
-            <div className="space-y-4 mb-10">
+            <motion.div 
+              variants={containerVariants}
+              className="space-y-5 mb-10"
+            >
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start group">
-                  <CheckCircle className="text-avance-gold mr-3 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" size={22} />
-                  <span className="text-gray-700">{benefit}</span>
-                </div>
+                <motion.div 
+                  key={index} 
+                  className="flex items-start group bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-avance-gold"
+                  variants={itemVariants}
+                >
+                  <div className={`${benefit.color} mr-3 flex-shrink-0 bg-gray-50 p-2 rounded-full group-hover:scale-110 transition-transform`}>
+                    <benefit.icon size={20} />
+                  </div>
+                  <span className="text-gray-700 pt-1">{benefit.text}</span>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             
-            <Link to="/quienes-somos" className="inline-flex items-center group font-semibold text-avance-blue hover:text-avance-gold transition-colors">
-              <span>Conocer más sobre nosotros</span>
-              <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={18} />
-            </Link>
-          </div>
+            <motion.div variants={itemVariants}>
+              <Link 
+                to="/quienes-somos" 
+                className="inline-flex items-center group px-6 py-3 bg-avance-blue text-white rounded-lg hover:bg-avance-blue/90 transition-colors shadow-sm hover:shadow-md"
+              >
+                <span>Conocer más sobre nosotros</span>
+                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={18} />
+              </Link>
+            </motion.div>
+          </motion.div>
           
-          <div className="order-1 lg:order-2 relative">
-            {/* Decorative circle */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-avance-gold rounded-full opacity-10"></div>
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-avance-blue rounded-full opacity-10"></div>
+          {/* Columna de imagen */}
+          <motion.div 
+            className="lg:col-span-6 order-1 lg:order-2 relative"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Elementos decorativos mejorados */}
+            <div className="absolute -top-16 -left-16 w-48 h-48 bg-gradient-to-br from-avance-gold/10 to-transparent rounded-full opacity-70"></div>
+            <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-gradient-to-tl from-avance-blue/15 to-transparent rounded-full opacity-70"></div>
             
-            {/* Image */}
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500">
+            {/* Contenedor principal de imagen */}
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
+              {/* Overlay sutil */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-avance-blue/20 to-transparent mix-blend-overlay z-10"></div>
+              
+              {/* Imagen con mejor manejo de escala */}
               <img 
-                src="/about-insurance-team.jpg" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/team.jpg" 
                 alt="Equipo Avance Seguros" 
-                className="w-full h-auto hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />
+              
+              {/* Distintivo en la esquina */}
+              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md z-20 flex items-center">
+                <Award size={20} className="text-avance-gold mr-2" />
+                <span className="text-avance-blue font-medium text-sm">+12 años de experiencia</span>
+              </div>
             </div>
             
-            {/* Stats card */}
-            <div className="bg-white p-6 rounded-xl shadow-xl absolute -bottom-10 left-10 transform hover:-translate-y-2 transition-transform duration-300">
+            {/* Tarjeta de estadísticas mejorada */}
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-xl absolute -bottom-10 -right-5 lg:-right-10 transform hover:-translate-y-2 transition-transform duration-300 border-t-4 border-avance-gold"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <div className="flex space-x-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-avance-blue">12+</div>
-                  <div className="text-sm text-gray-600">Años de experiencia</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-avance-blue to-avance-blue/80 bg-clip-text text-transparent">12+</div>
+                  <div className="text-sm text-gray-600">Años en el mercado</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-avance-blue">8+</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-avance-gold to-avance-gold/80 bg-clip-text text-transparent">8+</div>
                   <div className="text-sm text-gray-600">Aseguradoras aliadas</div>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+            
+            {/* Elemento decorativo adicional - 'Sello de calidad' */}
+            <motion.div 
+              className="hidden lg:flex absolute -bottom-8 left-10 bg-white shadow-lg rounded-full h-20 w-20 items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300"
+              initial={{ opacity: 0, rotate: 20 }}
+              whileInView={{ opacity: 1, rotate: 12 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Shield size={32} className="text-avance-blue" />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
