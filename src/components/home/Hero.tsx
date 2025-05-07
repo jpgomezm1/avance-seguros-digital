@@ -47,7 +47,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative pt-28 pb-16 md:pt-32 md:pb-24 bg-cover bg-center min-h-[90vh] flex items-center overflow-hidden" 
+    <div className="relative pt-28 pb-32 md:pb-40 md:pt-32 bg-cover bg-center min-h-[95vh] flex items-center overflow-hidden" 
          style={{ backgroundImage: "url('/family-hero-image.jpg')" }}>
       {/* Overlay de gradiente mejorado con patrón sutil */}
       <div className="absolute inset-0 bg-gradient-to-br from-avance-blue/95 via-avance-blue/90 to-avance-blue/80 z-0"></div>
@@ -79,7 +79,7 @@ const Hero = () => {
         >
           <motion.div 
             variants={itemVariants}
-            className="inline-flex items-center bg-avance-gold/80 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 rounded-full mb-8 font-medium shadow-lg border border-avance-gold/30"
+            className="inline-flex items-center bg-avance-gold/80 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 rounded-full mb-6 font-medium shadow-lg border border-avance-gold/30"
           >
             <Clock size={16} className="mr-2 text-white animate-pulse" />
             Más de 12 años protegiendo lo que más valoras
@@ -87,7 +87,7 @@ const Hero = () => {
           
           <motion.h1 
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-10 text-shadow"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 text-shadow"
           >
             <span className="block text-white">Protección que</span> 
             <span className="block bg-gradient-to-r from-avance-gold to-avance-gold-light bg-clip-text text-transparent drop-shadow-lg">
@@ -97,7 +97,7 @@ const Hero = () => {
           
           <motion.p 
             variants={itemVariants}
-            className="text-lg md:text-xl mb-12 text-white/95 max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl mb-10 text-white/95 max-w-2xl leading-relaxed"
           >
             En Avance Seguros, analizamos tus necesidades para ofrecerte la mejor cobertura al mejor precio. 
             <span className="relative inline-block font-medium">
@@ -108,7 +108,7 @@ const Hero = () => {
           
           <motion.div 
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-5"
+            className="flex flex-col sm:flex-row gap-5 mb-16"
           >
             <Link to="/cotizar" className="group relative overflow-hidden bg-gradient-to-r from-avance-gold to-avance-gold-light text-white rounded-xl px-8 py-4 font-medium text-center transition-all flex items-center justify-center shadow-lg hover:shadow-xl">
               <span className="relative z-10">Obtener cotización gratuita</span>
@@ -122,12 +122,13 @@ const Hero = () => {
             </Link>
           </motion.div>
           
+          {/* Estadísticas con posicionamiento mejorado */}
           <motion.div 
             variants={counterVariants}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-lg mb-12 z-20 relative"
           >
             {/* Tarjeta de estadística - Clientes protegidos */}
-            <div className="group relative overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/15 transition-all duration-300 shadow-lg">
+            <div className="group relative overflow-hidden bg-white/15 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/20 transition-all duration-300 shadow-lg">
               <div className="text-3xl font-bold bg-gradient-to-r from-avance-gold-light to-avance-gold bg-clip-text text-transparent">+5,000</div>
               <div className="text-sm mt-1 flex flex-col items-center justify-center">
                 <span>Clientes</span>
@@ -138,7 +139,7 @@ const Hero = () => {
             </div>
             
             {/* Tarjeta de estadística - Aseguradoras premium */}
-            <div className="group relative overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/15 transition-all duration-300 shadow-lg">
+            <div className="group relative overflow-hidden bg-white/15 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/20 transition-all duration-300 shadow-lg">
               <div className="text-3xl font-bold bg-gradient-to-r from-avance-gold-light to-avance-gold bg-clip-text text-transparent">8</div>
               <div className="text-sm mt-1 flex flex-col items-center justify-center">
                 <span>Aseguradoras</span>
@@ -149,7 +150,7 @@ const Hero = () => {
             </div>
             
             {/* Tarjeta de estadística - Años de experiencia */}
-            <div className="group relative overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/15 transition-all duration-300 shadow-lg">
+            <div className="group relative overflow-hidden bg-white/15 backdrop-blur-md p-4 rounded-xl text-center text-white border border-white/30 hover:border-white/40 hover:bg-white/20 transition-all duration-300 shadow-lg">
               <div className="text-3xl font-bold bg-gradient-to-r from-avance-gold-light to-avance-gold bg-clip-text text-transparent">12+</div>
               <div className="text-sm mt-1 flex flex-col items-center justify-center">
                 <span>Años de</span>
@@ -162,10 +163,10 @@ const Hero = () => {
         </motion.div>
       </div>
       
-      {/* Wave decoration mejorada con animación sutil */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
-          <path fill="#FFFFFF" fillOpacity="1" d="M0,128L60,138.7C120,149,240,171,360,186.7C480,203,600,213,720,192C840,171,960,117,1080,101.3C1200,85,1320,107,1380,117.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      {/* Wave decoration con altura reducida y posicionamiento mejorado */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140" className="w-full" preserveAspectRatio="none">
+          <path fill="#FFFFFF" fillOpacity="1" d="M0,64L60,69.3C120,75,240,85,360,90.7C480,96,600,96,720,85.3C840,75,960,53,1080,48C1200,43,1320,53,1380,58.7L1440,64L1440,140L1380,140C1320,140,1200,140,1080,140C960,140,840,140,720,140C600,140,480,140,360,140C240,140,120,140,60,140L0,140Z"></path>
         </svg>
       </div>
       
