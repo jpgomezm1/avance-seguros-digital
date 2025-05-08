@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,26 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+
+// Import personal insurance page components
+import AutomobileInsurance from "./pages/insurance/AutomobileInsurance";
+import HealthInsurance from "./pages/insurance/HealthInsurance";
+import HomeInsurance from "./pages/insurance/HomeInsurance";
+import LifeInsurance from "./pages/insurance/LifeInsurance";
+
+// Import business insurance page components
+import BusinessInsurance from "./pages/insurance/BusinessInsurance";
+import ComplianceInsurance from "./pages/insurance/ComplianceInsurance";
+import TransportInsurance from "./pages/insurance/TransportInsurance";
+import ARLInsurance from "./pages/insurance/ARLInsurance";
+
+// Import other page components
+import AboutUs from "./pages/AboutUs";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import QuoteRequest from "./pages/QuoteRequest";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 const queryClient = new QueryClient();
 
@@ -21,24 +40,24 @@ const App = () => (
           <Route path="/" element={<Index />} />
           
           {/* Rutas de seguros personales */}
-          <Route path="/seguros/automovil" element={<NotFound />} />
-          <Route path="/seguros/salud" element={<NotFound />} />
-          <Route path="/seguros/hogar" element={<NotFound />} />
-          <Route path="/seguros/vida" element={<NotFound />} />
+          <Route path="/seguros/automovil" element={<AutomobileInsurance />} />
+          <Route path="/seguros/salud" element={<HealthInsurance />} />
+          <Route path="/seguros/hogar" element={<HomeInsurance />} />
+          <Route path="/seguros/vida" element={<LifeInsurance />} />
           
           {/* Rutas de seguros empresariales */}
-          <Route path="/seguros/pymes" element={<NotFound />} />
-          <Route path="/seguros/cumplimiento" element={<NotFound />} />
-          <Route path="/seguros/transporte" element={<NotFound />} />
-          <Route path="/seguros/arl" element={<NotFound />} />
+          <Route path="/seguros/pymes" element={<BusinessInsurance />} />
+          <Route path="/seguros/cumplimiento" element={<ComplianceInsurance />} />
+          <Route path="/seguros/transporte" element={<TransportInsurance />} />
+          <Route path="/seguros/arl" element={<ARLInsurance />} />
           
           {/* Otras rutas */}
-          <Route path="/quienes-somos" element={<NotFound />} />
-          <Route path="/blog" element={<NotFound />} />
-          <Route path="/contacto" element={<NotFound />} />
-          <Route path="/cotizar" element={<NotFound />} />
-          <Route path="/politica-privacidad" element={<NotFound />} />
-          <Route path="/terminos-condiciones" element={<NotFound />} />
+          <Route path="/quienes-somos" element={<AboutUs />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/cotizar" element={<QuoteRequest />} />
+          <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
+          <Route path="/terminos-condiciones" element={<TermsConditions />} />
           
           {/* Ruta 404 para cualquier otra URL */}
           <Route path="*" element={<NotFound />} />
