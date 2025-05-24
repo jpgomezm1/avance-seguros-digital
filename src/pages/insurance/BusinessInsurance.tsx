@@ -100,7 +100,7 @@ const BusinessInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/business-insurance.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/pymes.png" 
                 alt="Seguro para PYMES" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

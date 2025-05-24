@@ -11,13 +11,6 @@ const Contact = () => {
       phone: "(312) 282 98 50",
       email: "medellin@avanceseguros.com",
       hours: "Lunes a Viernes: 8:00 AM - 5:00 PM"
-    },
-    {
-      city: "Bogotá",
-      address: "Carrera 15 #85-20, Torre Empresarial, Of. 301",
-      phone: "(302) 345 67 89",
-      email: "bogota@avanceseguros.com",
-      hours: "Lunes a Viernes: 8:00 AM - 5:00 PM"
     }
   ];
 
@@ -77,8 +70,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-avance-blue text-lg">Teléfono</h3>
-                    <p className="text-gray-600">(312) 282 98 50</p>
-                    <p className="text-gray-600">(034) 444 49 16</p>
+                    <p className="text-gray-600">(310) 848 35 62</p>
                   </div>
                 </div>
                 
@@ -88,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-avance-blue text-lg">Correo electrónico</h3>
-                    <p className="text-gray-600">contacto@avanceseguros.com</p>
+                    <p className="text-gray-600">info@avanceseguros.com</p>
                   </div>
                 </div>
                 
@@ -236,63 +228,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Office Locations Section */}
-      <section className="py-20 bg-avance-lightblue">
-        <div className="container-custom">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block bg-white text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">NUESTRAS OFICINAS</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">Visítanos</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Contamos con oficinas en las principales ciudades de Colombia para brindarte una atención personalizada.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {offices.map((office, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-              >
-                <h3 className="text-2xl font-bold text-avance-blue mb-4">{office.city}</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="text-avance-gold mt-1 mr-3" size={20} />
-                    <span className="text-gray-600">{office.address}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Phone className="text-avance-gold mt-1 mr-3" size={20} />
-                    <span className="text-gray-600">{office.phone}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Mail className="text-avance-gold mt-1 mr-3" size={20} />
-                    <span className="text-gray-600">{office.email}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <Clock className="text-avance-gold mt-1 mr-3" size={20} />
-                    <span className="text-gray-600">{office.hours}</span>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <button className="text-avance-blue font-medium flex items-center">
-                    Ver en mapa
-                    <ArrowRight size={16} className="ml-2" />
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-white">

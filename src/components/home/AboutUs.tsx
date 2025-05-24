@@ -15,7 +15,7 @@ const AboutUs = () => {
       color: 'text-avance-blue'
     },
     {
-      text: 'Más de 12 años de experiencia en el mercado',
+      text: 'Más de 17 años de experiencia en el mercado',
       icon: Clock,
       color: 'text-avance-gold'
     },
@@ -142,40 +142,15 @@ const AboutUs = () => {
               {/* Distintivo en la esquina */}
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md z-20 flex items-center">
                 <Award size={20} className="text-avance-gold mr-2" />
-                <span className="text-avance-blue font-medium text-sm">+12 años de experiencia</span>
+                <span className="text-avance-blue font-medium text-sm">+17 años de experiencia</span>
               </div>
             </div>
             
             {/* Tarjeta de estadísticas mejorada */}
-            <motion.div 
-              className="bg-white p-6 rounded-xl shadow-xl absolute -bottom-10 -right-5 lg:-right-10 transform hover:-translate-y-2 transition-transform duration-300 border-t-4 border-avance-gold"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex space-x-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-avance-blue to-avance-blue/80 bg-clip-text text-transparent">12+</div>
-                  <div className="text-sm text-gray-600">Años en el mercado</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-avance-gold to-avance-gold/80 bg-clip-text text-transparent">8+</div>
-                  <div className="text-sm text-gray-600">Aseguradoras aliadas</div>
-                </div>
-              </div>
-            </motion.div>
+       
             
             {/* Elemento decorativo adicional - 'Sello de calidad' */}
-            <motion.div 
-              className="hidden lg:flex absolute -bottom-8 left-10 bg-white shadow-lg rounded-full h-20 w-20 items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300"
-              initial={{ opacity: 0, rotate: 20 }}
-              whileInView={{ opacity: 1, rotate: 12 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Shield size={32} className="text-avance-blue" />
-            </motion.div>
+           
           </motion.div>
         </div>
       </div>

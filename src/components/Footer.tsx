@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Columna izquierda - Logo e información */}
           <div className="max-w-xs">
             <img 
-              src="https://storage.googleapis.com/cluvi/Imagenes/logo-avance-white.png" 
+              src="https://storage.googleapis.com/cluvi/Imagenes/logo_avance_blanco.png" 
               alt="Avance Seguros"
               className="h-12 mb-4" 
             />
@@ -66,11 +66,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone size={16} className="text-[#C69C3F] mr-2 flex-shrink-0" />
-                <span className="text-white/70 text-sm">(312) 282 98 50</span>
+                <span className="text-white/70 text-sm">(310)-848-35-62</span>
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="text-[#C69C3F] mr-2 flex-shrink-0" />
-                <span className="text-white/70 text-sm">contacto@avanceseguros.com</span>
+                <span className="text-white/70 text-sm">info@avanceseguros.com</span>
               </li>
               <li className="flex items-center">
                 <MapPin size={16} className="text-[#C69C3F] mr-2 flex-shrink-0" />

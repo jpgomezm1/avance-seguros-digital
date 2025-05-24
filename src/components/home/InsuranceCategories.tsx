@@ -1,100 +1,98 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
-// Importar todos los iconos de Lucide con el mismo tamaño
+// Importar todos los iconos de Lucide
 import { 
-  Building2, FileCheck, Truck, ShieldCheck,
-  Car, HeartPulse, Home, User
+  Building2, FileCheck, Truck, ShieldCheck, Scale,
+  Car, HeartPulse, Home, User, PawPrint, HardHat, ArrowRight
 } from 'lucide-react';
 
 const InsuranceCategories = () => {
   const [activeCategory, setActiveCategory] = useState('personal');
-  const containerRef = useRef(null);
   
-  // Paleta consistente con la identidad de Avance Seguros
-  const colorScheme = {
-    primary: {
-      main: '#0A4958', // Azul Avance
-      light: '#0a495814', // Versión transparente para fondos
-      border: '#0a495833' // Versión para bordes
-    },
-    secondary: {
-      main: '#C69C3F', // Dorado Avance
-      light: '#c69c3f14', // Versión transparente para fondos
-      border: '#c69c3f33' // Versión para bordes
-    }
-  };
-  
-  // Datos con colores e iconos consistentes
+  // Datos actualizados solo con colores de Avance
   const personalInsurance = [
-    {
-      icon: Car,
-      title: 'Automóvil',
-      path: '/seguros/automovil',
-      description: 'Protección completa para tu vehículo',
-      features: ['Responsabilidad civil', 'Daños a terceros', 'Asistencia en carretera'],
-      borderColor: colorScheme.primary.main
-    },
     {
       icon: HeartPulse,
       title: 'Salud',
       path: '/seguros/salud',
       description: 'Cuida de ti y tu familia',
-      features: ['Cobertura hospitalaria', 'Consultas médicas', 'Medicamentos'],
-      borderColor: colorScheme.primary.main
-    },
-    {
-      icon: Home,
-      title: 'Hogar',
-      path: '/seguros/hogar',
-      description: 'Protección para tu patrimonio',
-      features: ['Incendio', 'Robo', 'Daños por agua'],
-      borderColor: colorScheme.primary.main
+      features: ['Cobertura hospitalaria', 'Consultas médicas', 'Medicamentos']
     },
     {
       icon: User,
       title: 'Vida',
       path: '/seguros/vida',
       description: 'Tranquilidad para ti y los tuyos',
-      features: ['Fallecimiento', 'Incapacidad', 'Enfermedades graves'],
-      borderColor: colorScheme.primary.main
+      features: ['Fallecimiento', 'Incapacidad', 'Enfermedades graves']
     },
+    {
+      icon: Home,
+      title: 'Hogar',
+      path: '/seguros/hogar',
+      description: 'Protección para tu patrimonio',
+      features: ['Incendio', 'Robo', 'Daños por agua']
+    },
+    {
+      icon: Car,
+      title: 'Movilidad',
+      path: '/seguros/movilidad',
+      description: 'Protección completa para tu vehículo',
+      features: ['Responsabilidad civil', 'Daños a terceros', 'Asistencia en carretera']
+    },
+    {
+      icon: PawPrint,
+      title: 'Mascotas',
+      path: '/seguros/mascotas',
+      description: 'Cuidado integral para tus mascotas',
+      features: ['Consultas veterinarias', 'Emergencias médicas', 'Cirugías']
+    }
   ];
 
   const businessInsurance = [
     {
       icon: Building2,
-      title: 'PYMES',
-      path: '/seguros/pymes',
+      title: 'Corporativos y PYMES',
+      path: '/seguros/corporativos-pymes',
       description: 'Protección integral para tu negocio',
-      features: ['Multirriesgo empresarial', 'Pérdida de beneficios', 'RC patronal'],
-      borderColor: colorScheme.primary.main
+      features: ['Multirriesgo empresarial', 'Pérdida de beneficios', 'RC patronal']
     },
     {
-      icon: FileCheck,
-      title: 'Cumplimiento',
-      path: '/seguros/cumplimiento',
-      description: 'Garantía para tus contratos',
-      features: ['Anticipos', 'Estabilidad de obra', 'Seriedad de oferta'],
-      borderColor: colorScheme.primary.main
+      icon: Scale,
+      title: 'Responsabilidad Civil',
+      path: '/seguros/responsabilidad-civil',
+      description: 'Protección ante responsabilidades',
+      features: ['Daños a terceros', 'RC profesional', 'Defensa jurídica']
     },
     {
       icon: Truck,
       title: 'Transporte',
       path: '/seguros/transporte',
       description: 'Seguridad para tus mercancías',
-      features: ['Daños', 'Robo', 'Cobertura internacional'],
-      borderColor: colorScheme.primary.main
+      features: ['Daños', 'Robo', 'Cobertura internacional']
+    },
+    {
+      icon: HardHat,
+      title: 'Todo Riesgo Construcción',
+      path: '/seguros/todo-riesgo-construccion',
+      description: 'Protección integral para obras',
+      features: ['Daños físicos', 'Maquinaria', 'Periodo de mantenimiento']
+    },
+    {
+      icon: FileCheck,
+      title: 'Cumplimiento',
+      path: '/seguros/cumplimiento',
+      description: 'Garantía para tus contratos',
+      features: ['Anticipos', 'Estabilidad de obra', 'Seriedad de oferta']
     },
     {
       icon: ShieldCheck,
       title: 'ARL',
       path: '/seguros/arl',
       description: 'Protección laboral para tus empleados',
-      features: ['Accidentes laborales', 'Enfermedades profesionales', 'Capacitaciones'],
-      borderColor: colorScheme.primary.main
-    },
+      features: ['Accidentes laborales', 'Enfermedades profesionales', 'Capacitaciones']
+    }
   ];
 
   // Animaciones
@@ -103,146 +101,308 @@ const InsuranceCategories = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.08
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: { 
-        duration: 0.4,
-        ease: "easeOut"
+        duration: 0.5,
+        ease: [0.25, 0.46, 0.45, 0.94]
       }
     }
   };
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      {/* Elementos decorativos sutiles con los colores de la marca */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0A4958] opacity-5 blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#C69C3F] opacity-5 blur-3xl translate-x-1/3 translate-y-1/3"></div>
+    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Elementos decorativos con colores de Avance */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-avance-blue/10 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-avance-gold/10 to-transparent rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-avance-blue/5 to-avance-gold/5 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
       
       <div className="container-custom relative z-10">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-4xl mx-auto mb-20"
         >
-          <span className="text-[#C69C3F] font-semibold mb-3 inline-block px-4 py-1 bg-[#c69c3f14] rounded-full text-sm">NUESTRAS SOLUCIONES</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0A4958]">Seguros diseñados para cada necesidad</h2>
-          <p className="text-gray-600 text-lg">Ofrecemos una amplia gama de soluciones tanto para personas como para empresas, adaptadas a tus necesidades específicas y respaldadas por las mejores aseguradoras.</p>
+          <motion.span 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-avance-blue/10 to-avance-gold/10 text-avance-blue font-semibold rounded-full text-sm border border-avance-blue/20 mb-6"
+          >
+            ✨ NUESTRAS SOLUCIONES
+          </motion.span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 text-avance-blue leading-tight">
+            Seguros diseñados para{' '}
+            <span className="bg-gradient-to-r from-avance-gold to-avance-gold bg-clip-text text-transparent">
+              cada necesidad
+            </span>
+          </h2>
+          <p className="text-gray-600 text-xl leading-relaxed">
+            Ofrecemos una amplia gama de soluciones tanto para personas como para empresas, 
+            adaptadas a tus necesidades específicas y respaldadas por las mejores aseguradoras.
+          </p>
         </motion.div>
 
-        {/* Selector de tipo de seguro con colores de la marca */}
+        {/* Selector mejorado */}
         <div className="flex justify-center mb-16">
-          <div className="bg-[#0a495814] p-1.5 rounded-xl inline-flex">
-            <button 
-              onClick={() => setActiveCategory('personal')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                activeCategory === 'personal' 
-                  ? 'bg-white text-[#0A4958] shadow-md' 
-                  : 'text-gray-600 hover:text-[#0A4958]'
-              }`}
-            >
-              Seguros Personales
-            </button>
-            <button 
-              onClick={() => setActiveCategory('business')}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                activeCategory === 'business' 
-                  ? 'bg-white text-[#0A4958] shadow-md' 
-                  : 'text-gray-600 hover:text-[#0A4958]'
-              }`}
-            >
-              Seguros Empresariales
-            </button>
+          <div className="relative p-2 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="flex">
+              <button 
+                onClick={() => setActiveCategory('personal')}
+                className={`relative px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  activeCategory === 'personal' 
+                    ? 'text-white shadow-lg' 
+                    : 'text-gray-600 hover:text-avance-blue'
+                }`}
+              >
+                {activeCategory === 'personal' && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-gradient-to-r from-avance-blue to-avance-blue-dark rounded-xl"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="relative z-10">Seguros Personales</span>
+              </button>
+              <button 
+                onClick={() => setActiveCategory('business')}
+                className={`relative px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  activeCategory === 'business' 
+                    ? 'text-white shadow-lg' 
+                    : 'text-gray-600 hover:text-avance-blue'
+                }`}
+              >
+                {activeCategory === 'business' && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-gradient-to-r from-avance-blue to-avance-blue-dark rounded-xl"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="relative z-10">Seguros Empresariales</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Contenedor de tarjetas */}
-        <motion.div
-          key={activeCategory}
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
-        >
-          {(activeCategory === 'personal' ? personalInsurance : businessInsurance).map((item, index) => (
-            <motion.div 
-              key={index} 
-              className="group"
-              variants={itemVariants}
-            >
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col border border-gray-100 overflow-hidden">
-                {/* Borde superior con color de la marca */}
-                <div className="h-1 w-full bg-[#0A4958]"></div>
-                
-                <div className="p-6">
-                  {/* Encabezado con ícono consistente */}
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-[#0a495814] flex items-center justify-center">
-                      <item.icon size={24} strokeWidth={1.75} className="text-[#0A4958]" />
+        {/* Grid mejorado para seguros personales */}
+        {activeCategory === 'personal' && (
+          <motion.div
+            key="personal"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="space-y-8"
+          >
+            {/* Primera fila - 3 tarjetas */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {personalInsurance.slice(0, 3).map((item, index) => (
+                <motion.div 
+                  key={index} 
+                  className="group"
+                  variants={itemVariants}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                >
+                  <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col overflow-hidden border border-gray-100 group-hover:border-avance-blue/20">
+                    {/* Fondo sutil con colores de Avance */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Icono con colores de Avance */}
+                    <div className="relative p-8 pb-4">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <item.icon size={28} className="text-white" strokeWidth={2} />
+                      </div>
+                      
+                      <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-gray-600 leading-relaxed">{item.description}</p>
                     </div>
-                    <h3 className="ml-4 text-xl font-bold text-[#0A4958]">{item.title}</h3>
+                    
+                    {/* Características */}
+                    <div className="relative px-8 pb-4 flex-1">
+                      <ul className="space-y-3">
+                        {item.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-gray-700">
+                            <div className="w-2 h-2 bg-avance-gold rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="text-sm leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Botón */}
+                    <div className="relative p-8 pt-4">
+                      <Link 
+                        to={item.path} 
+                        className="group/btn inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-avance-blue to-avance-blue-dark text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                      >
+                        <span>Conocer más</span>
+                        <ArrowRight size={18} className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Segunda fila - 2 tarjetas centradas */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {personalInsurance.slice(3, 5).map((item, index) => (
+                <motion.div 
+                  key={index + 3} 
+                  className="group"
+                  variants={itemVariants}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                >
+                  <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col overflow-hidden border border-gray-100 group-hover:border-avance-blue/20">
+                    {/* Fondo sutil con colores de Avance */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Icono con colores de Avance */}
+                    <div className="relative p-8 pb-4">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <item.icon size={28} className="text-white" strokeWidth={2} />
+                      </div>
+                      
+                      <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-gray-600 leading-relaxed">{item.description}</p>
+                    </div>
+                    
+                    {/* Características */}
+                    <div className="relative px-8 pb-4 flex-1">
+                      <ul className="space-y-3">
+                        {item.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-gray-700">
+                            <div className="w-2 h-2 bg-avance-gold rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="text-sm leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* Botón */}
+                    <div className="relative p-8 pt-4">
+                      <Link 
+                        to={item.path} 
+                        className="group/btn inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-avance-blue to-avance-blue-dark text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                      >
+                        <span>Conocer más</span>
+                        <ArrowRight size={18} className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Grid para seguros empresariales */}
+        {activeCategory === 'business' && (
+          <motion.div
+            key="business"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {businessInsurance.map((item, index) => (
+              <motion.div 
+                key={index} 
+                className="group"
+                variants={itemVariants}
+                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              >
+                <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col overflow-hidden border border-gray-100 group-hover:border-avance-blue/20">
+                  {/* Fondo sutil con colores de Avance */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Icono con colores de Avance */}
+                  <div className="relative p-8 pb-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <item.icon size={28} className="text-white" strokeWidth={2} />
+                    </div>
+                    
+                    <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">{item.description}</p>
+                  {/* Características */}
+                  <div className="relative px-8 pb-4 flex-1">
+                    <ul className="space-y-3">
+                      {item.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-700">
+                          <div className="w-2 h-2 bg-avance-gold rounded-full mr-3 flex-shrink-0"></div>
+                          <span className="text-sm leading-relaxed">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   
-                  {/* Lista de características */}
-                  <ul className="mb-6 space-y-2">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start text-gray-700">
-                        <span className="text-[#C69C3F] mr-2">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {/* Botón de acción con colores de la marca */}
-                  <div className="mt-auto pt-4">
+                  {/* Botón */}
+                  <div className="relative p-8 pt-4">
                     <Link 
                       to={item.path} 
-                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-white border border-[#0a495833] rounded-lg text-[#0A4958] font-medium hover:bg-[#0a495814] transition-all duration-300 group-hover:border-[#0A4958]"
+                      className="group/btn inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-avance-blue to-avance-blue-dark text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                     >
-                      Conocer más
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                      <span>Conocer más</span>
+                      <ArrowRight size={18} className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
         
-        {/* CTA con colores de la marca */}
+        {/* CTA con colores de Avance */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 text-center p-10 rounded-2xl bg-[#0A4958] shadow-md relative overflow-hidden"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-24 relative"
         >
-          {/* Elementos decorativos del CTA */}
-          <div className="absolute -top-20 -left-20 w-40 h-40 bg-white opacity-5 rounded-full blur-xl"></div>
-          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-white opacity-5 rounded-full blur-xl"></div>
-          
-          <h3 className="text-white text-2xl md:text-3xl font-bold mb-4">¿Necesitas un seguro personalizado?</h3>
-          <p className="text-white/90 max-w-2xl mx-auto mb-8">
-            Nuestros asesores expertos te ayudarán a encontrar la mejor opción que se adapte a tus necesidades específicas.
-          </p>
-          
-          <Link 
-            to="/cotizar" 
-            className="inline-block bg-[#C69C3F] hover:bg-[#b38935] text-white rounded-lg px-8 py-4 font-medium transition-all shadow-md"
-          >
-            Explorar todos nuestros seguros
-          </Link>
+          <div className="bg-gradient-to-r from-avance-blue via-avance-blue-dark to-avance-blue text-white rounded-3xl p-12 shadow-2xl relative overflow-hidden">
+            {/* Elementos decorativos del CTA */}
+            <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-avance-gold/20 rounded-full blur-2xl translate-x-1/2 translate-y-1/2"></div>
+            <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl"></div>
+            
+            <div className="relative z-10 text-center max-w-3xl mx-auto">
+              <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                ¿Necesitas un seguro{' '}
+                <span className="bg-gradient-to-r from-avance-gold to-avance-gold bg-clip-text text-transparent">
+                  personalizado?
+                </span>
+              </h3>
+              <p className="text-xl text-white/90 mb-10 leading-relaxed">
+                Nuestros asesores expertos te ayudarán a encontrar la mejor opción que se adapte a tus necesidades específicas.
+              </p>
+              
+              <Link 
+                to="/cotizar" 
+                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-avance-gold to-avance-gold text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
+              >
+                <span>Explorar todos nuestros seguros</span>
+                <ArrowRight size={20} className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

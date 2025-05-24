@@ -110,7 +110,7 @@ const TransportInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/transport-insurance.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/trans.png" 
                 alt="Seguro de transporte" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />
@@ -201,7 +201,7 @@ const TransportInsurance = () => {
               transition={{ duration: 0.6 }}
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/cargo-transport.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/trans.png" 
                 alt="Transporte de mercancías" 
                 className="rounded-xl shadow-lg w-full h-auto"
               />

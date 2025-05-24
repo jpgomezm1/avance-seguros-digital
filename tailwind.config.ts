@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,21 +62,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Colores personalizados de Avance Seguros
+				// Colores personalizados de Avance Seguros - ACTUALIZADOS
 				avance: {
-					blue: '#0A4958', 
-					"blue-light": '#1a6980',
-					"blue-dark": '#053642',
-					gold: '#C69C3F',
-					"gold-light": '#e0b858',
-					"gold-dark": '#a27c32',
-					lightblue: '#EBF2F5',
+					blue: '#0E4964', // Nuevo azul
+					"blue-light": '#1B5A7A',
+					"blue-dark": '#0A3649',
+					gold: '#AA8437', // Nuevo dorado
+					"gold-light": '#C19B4B',
+					"gold-dark": '#8A6C2D',
+					lightblue: '#E8F1F4', // Ajustado al nuevo azul
 					gray: '#F5F5F5',
 				},
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				opensans: ['Open Sans', 'sans-serif'],
+				// Definir Poppins como tipografía principal
+				sans: ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

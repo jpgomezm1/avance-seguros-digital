@@ -10,7 +10,7 @@ const Hero = () => {
   const [counters, setCounters] = useState({
     clients: 0,
     insurers: 0,
-    years: 0
+    years: 17
   });
 
   // Variables para animaciones
@@ -184,7 +184,7 @@ const Hero = () => {
               className="inline-flex items-center bg-avance-gold/90 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 rounded-full mb-7 font-medium shadow-lg border border-avance-gold/30"
             >
               <Clock size={16} className="mr-2 text-white animate-pulse" />
-              Más de 12 años protegiendo lo que más valoras
+              Más de 17 años protegiendo lo que más valoras
             </motion.div>
             
             <motion.h1 
@@ -193,7 +193,7 @@ const Hero = () => {
             >
               <span className="block text-white">Protección que</span> 
               <span className="block bg-gradient-to-r from-avance-gold to-amber-400 bg-clip-text text-transparent drop-shadow-lg">
-                se adapta a tu vida
+                 Evoluciona contigo
               </span>
             </motion.h1>
             
@@ -201,11 +201,11 @@ const Hero = () => {
               variants={itemVariants}
               className="text-lg md:text-xl mb-8 lg:mb-10 text-white/95 max-w-2xl leading-relaxed"
             >
-              En Avance Seguros, analizamos tus necesidades para ofrecerte la mejor cobertura al mejor precio. 
+              Ofrecemos soluciones de protección diseñadas para adaptarse a las diferentes etapas de tu vida, 
               <span className="relative inline-block font-medium">
-                <span className="text-avance-gold"> No vendemos seguros</span>
+                <span className="text-avance-gold">  Nuestro compromiso es brindarte la cobertura que necesitas.</span>
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-avance-gold/50"></span>
-              </span>, encontramos la protección que realmente necesitas.
+              </span>  Porque sabemos que tu vida no es estática, y tu seguro tampoco debería serlo.
             </motion.p>
             
             <motion.div 

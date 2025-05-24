@@ -100,7 +100,7 @@ const HomeInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/home-insurance.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/home.png" 
                 alt="Seguro de hogar" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />
@@ -207,7 +207,7 @@ const HomeInsurance = () => {
               className="order-1 md:order-2"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/home-protection.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/home.png" 
                 alt="Protección para tu hogar" 
                 className="rounded-xl shadow-lg w-full h-auto"
               />

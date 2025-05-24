@@ -90,7 +90,7 @@ const AutomobileInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/car-insurance.png" 
+                src="https://storage.googleapis.com/cluvi/Imagenes/vehiculo.png" 
                 alt="Seguro de automóvil" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />
