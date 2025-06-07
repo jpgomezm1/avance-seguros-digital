@@ -181,13 +181,6 @@ const InsurancePartners = () => {
                       <span className="text-[#0A4958] font-medium">Aliados desde 2010</span> | Más de {new Date().getFullYear() - 2010} años trabajando juntos
                     </div>
                     
-                    <a 
-                      href={`/cotizar?aseguradora=${encodeURIComponent(partners[activePartner].name)}`}
-                      className="inline-flex items-center px-5 py-2.5 bg-[#0A4958] hover:bg-[#0A4958]/90 text-white rounded-lg transition-all text-sm font-medium"
-                    >
-                      Cotizar con {partners[activePartner].name}
-                      <ArrowRight size={16} className="ml-2" />
-                    </a>
                   </div>
                 </div>
               </div>

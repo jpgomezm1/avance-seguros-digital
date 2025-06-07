@@ -4,25 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avance | Agencia de seguros</title>
+
     <meta name="description" content="En Avance Seguros encontramos la mejor opción del mercado para ti. Seguros de automóvil, salud, hogar, vida, PYMES y más. Cotiza gratis." />
     <meta name="author" content="Avance Seguros" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Avance Seguros - Soluciones de seguros personalizados" />
     <meta property="og:description" content="En Avance Seguros encontramos la mejor opción del mercado para ti. Seguros de automóvil, salud, hogar, vida, PYMES y más. Cotiza gratis." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://avance-seguros.com/og-image.png" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@avanceseguros" />
     <meta name="twitter:image" content="https://avance-seguros.com/og-image.png" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./bolita.png" />
+
+    <!-- Favicon inicial -->
+    <link rel="icon" type="image/png" href="/bolita.png" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+
+    <!-- Fijar el favicon dinámicamente para evitar reemplazos -->
+    <script>
+      const forceFavicon = () => {
+        const faviconUrl = '/bolita.png';
+
+        // Eliminar favicons existentes
+        document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]').forEach((el) => {
+          el.parentNode.removeChild(el);
+        });
+
+        // Crear nuevo favicon
+        const newFavicon = document.createElement('link');
+        newFavicon.rel = 'icon';
+        newFavicon.type = 'image/png';
+        newFavicon.href = faviconUrl;
+        document.head.appendChild(newFavicon);
+      };
+
+      const observeRouteChanges = () => {
+        const push = history.pushState;
+        const replace = history.replaceState;
+
+        history.pushState = function () {
+          push.apply(this, arguments);
+          setTimeout(forceFavicon, 50);
+        };
+        history.replaceState = function () {
+          replace.apply(this, arguments);
+          setTimeout(forceFavicon, 50);
+        };
+
+        window.addEventListener('popstate', () => setTimeout(forceFavicon, 50));
+      };
+
+      forceFavicon();
+      observeRouteChanges();
+    </script>
+
+    <!-- Scripts principales -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>

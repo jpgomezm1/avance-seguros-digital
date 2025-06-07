@@ -17,8 +17,12 @@ const DropdownItem = ({ title, items }) => {
             to={item.path} 
             className="flex items-center px-5 py-3 text-gray-700 hover:bg-avance-lightblue hover:text-avance-blue group/item"
           >
-            <span className="mr-3 w-8 h-8 flex items-center justify-center bg-avance-lightblue text-avance-blue rounded-full text-sm">
-              {item.icon}
+            <span className="mr-3 w-8 h-8 flex items-center justify-center bg-avance-lightblue rounded-full">
+              <img 
+                src={item.iconSrc} 
+                alt={`${item.label} icon`}
+                className="w-5 h-5 object-contain"
+              />
             </span>
             <div className="flex-1">
               <span className="font-medium block">{item.label}</span>
@@ -227,22 +231,77 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Datos para los menús desplegables - ACTUALIZADOS
+  // Datos para los menús desplegables - CON IMÁGENES
   const personalInsuranceItems = [
-    { label: 'Salud', path: '/seguros/salud', icon: '❤️', description: 'Cuida de ti y tu familia' },
-    { label: 'Vida', path: '/seguros/vida', icon: '👤', description: 'Tranquilidad para ti y los tuyos' },
-    { label: 'Hogar', path: '/seguros/hogar', icon: '🏠', description: 'Protección para tu patrimonio' },
-    { label: 'Movilidad', path: '/seguros/automovil', icon: '🚗', description: 'Protección completa para tu vehículo' },
-    { label: 'Mascotas', path: '/seguros/mascotas', icon: '🐕', description: 'Cuidado integral para tus mascotas' }
+    { 
+      label: 'Salud', 
+      path: '/seguros/salud', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Salud.png', 
+      description: 'Cuida de ti y tu familia' 
+    },
+    { 
+      label: 'Vida', 
+      path: '/seguros/vida', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Vida.png', 
+      description: 'Tranquilidad para ti y los tuyos' 
+    },
+    { 
+      label: 'Hogar', 
+      path: '/seguros/hogar', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Hogar.png', 
+      description: 'Protección para tu patrimonio' 
+    },
+    { 
+      label: 'Movilidad', 
+      path: '/seguros/automovil', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Autos.png', 
+      description: 'Protección completa para tu vehículo' 
+    },
+    { 
+      label: 'Mascotas', 
+      path: '/seguros/mascotas', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Mascotas.png', 
+      description: 'Cuidado integral para tus mascotas' 
+    }
   ];
   
   const businessInsuranceItems = [
-    { label: 'Corporativos y PYMES', path: '/seguros/pymes', icon: '🏢', description: 'Protección integral para tu negocio' },
-    { label: 'Responsabilidad Civil', path: '/seguros/responsabilidad-civil', icon: '⚖️', description: 'Protección ante responsabilidades civiles' },
-    { label: 'Transporte', path: '/seguros/transporte', icon: '🚚', description: 'Seguridad para tus mercancías' },
-    { label: 'Todo Riesgo Construcción', path: '/seguros/todo-riesgo-construccion', icon: '🏗️', description: 'Cobertura completa para construcciones' },
-    { label: 'Cumplimiento', path: '/seguros/cumplimiento', icon: '🤝', description: 'Garantía para tus contratos' },
-    { label: 'ARL', path: '/seguros/arl', icon: '⛑️', description: 'Protección laboral para tus empleados' }
+    { 
+      label: 'Corporativos y PYMES', 
+      path: '/seguros/pymes', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Pymes.png', 
+      description: 'Protección integral para tu negocio' 
+    },
+    { 
+      label: 'Responsabilidad Civil', 
+      path: '/seguros/responsabilidad-civil', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Responsabilidad_Civil.png', 
+      description: 'Protección ante responsabilidades civiles' 
+    },
+    { 
+      label: 'Transporte', 
+      path: '/seguros/transporte', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Transporte.png', 
+      description: 'Seguridad para tus mercancías' 
+    },
+    { 
+      label: 'Todo Riesgo Construcción', 
+      path: '/seguros/todo-riesgo-construccion', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Todo_Riesgo.png', 
+      description: 'Cobertura completa para construcciones' 
+    },
+    { 
+      label: 'Cumplimiento', 
+      path: '/seguros/cumplimiento', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Cumplimiento.png', 
+      description: 'Garantía para tus contratos' 
+    },
+    { 
+      label: 'ARL', 
+      path: '/seguros/arl', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/ARL.png', 
+      description: 'Protección laboral para tus empleados' 
+    }
   ];
   
   useEffect(() => {

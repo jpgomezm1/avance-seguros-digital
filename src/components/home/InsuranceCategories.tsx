@@ -2,47 +2,44 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-// Importar todos los iconos de Lucide
-import { 
-  Building2, FileCheck, Truck, ShieldCheck, Scale,
-  Car, HeartPulse, Home, User, PawPrint, HardHat, ArrowRight
-} from 'lucide-react';
+// Solo importamos ArrowRight ya que es el único icono que se mantiene
+import { ArrowRight } from 'lucide-react';
 
 const InsuranceCategories = () => {
   const [activeCategory, setActiveCategory] = useState('personal');
   
-  // Datos actualizados solo con colores de Avance
+  // Datos actualizados con imágenes en lugar de iconos
   const personalInsurance = [
     {
-      icon: HeartPulse,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Salud.png',
       title: 'Salud',
       path: '/seguros/salud',
       description: 'Cuida de ti y tu familia',
       features: ['Cobertura hospitalaria', 'Consultas médicas', 'Medicamentos']
     },
     {
-      icon: User,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Vida.png',
       title: 'Vida',
       path: '/seguros/vida',
       description: 'Tranquilidad para ti y los tuyos',
       features: ['Fallecimiento', 'Incapacidad', 'Enfermedades graves']
     },
     {
-      icon: Home,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Hogar.png',
       title: 'Hogar',
       path: '/seguros/hogar',
       description: 'Protección para tu patrimonio',
       features: ['Incendio', 'Robo', 'Daños por agua']
     },
     {
-      icon: Car,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Autos.png',
       title: 'Movilidad',
       path: '/seguros/movilidad',
       description: 'Protección completa para tu vehículo',
       features: ['Responsabilidad civil', 'Daños a terceros', 'Asistencia en carretera']
     },
     {
-      icon: PawPrint,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Mascotas.png',
       title: 'Mascotas',
       path: '/seguros/mascotas',
       description: 'Cuidado integral para tus mascotas',
@@ -52,42 +49,42 @@ const InsuranceCategories = () => {
 
   const businessInsurance = [
     {
-      icon: Building2,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Pymes.png',
       title: 'Corporativos y PYMES',
       path: '/seguros/corporativos-pymes',
       description: 'Protección integral para tu negocio',
       features: ['Multirriesgo empresarial', 'Pérdida de beneficios', 'RC patronal']
     },
     {
-      icon: Scale,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Responsabilidad_Civil.png',
       title: 'Responsabilidad Civil',
       path: '/seguros/responsabilidad-civil',
       description: 'Protección ante responsabilidades',
       features: ['Daños a terceros', 'RC profesional', 'Defensa jurídica']
     },
     {
-      icon: Truck,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Transporte.png',
       title: 'Transporte',
       path: '/seguros/transporte',
       description: 'Seguridad para tus mercancías',
       features: ['Daños', 'Robo', 'Cobertura internacional']
     },
     {
-      icon: HardHat,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Todo_Riesgo.png',
       title: 'Todo Riesgo Construcción',
       path: '/seguros/todo-riesgo-construccion',
       description: 'Protección integral para obras',
       features: ['Daños físicos', 'Maquinaria', 'Periodo de mantenimiento']
     },
     {
-      icon: FileCheck,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Cumplimiento.png',
       title: 'Cumplimiento',
       path: '/seguros/cumplimiento',
       description: 'Garantía para tus contratos',
       features: ['Anticipos', 'Estabilidad de obra', 'Seriedad de oferta']
     },
     {
-      icon: ShieldCheck,
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/ARL.png',
       title: 'ARL',
       path: '/seguros/arl',
       description: 'Protección laboral para tus empleados',
@@ -217,10 +214,14 @@ const InsuranceCategories = () => {
                     {/* Fondo sutil con colores de Avance */}
                     <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
-                    {/* Icono con colores de Avance */}
+                    {/* Imagen en lugar de icono - SIN fondo azul */}
                     <div className="relative p-8 pb-4">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <item.icon size={28} className="text-white" strokeWidth={2} />
+                      <div className="w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img 
+                          src={item.iconSrc} 
+                          alt={`${item.title} icon`}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       
                       <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
@@ -269,10 +270,14 @@ const InsuranceCategories = () => {
                     {/* Fondo sutil con colores de Avance */}
                     <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
-                    {/* Icono con colores de Avance */}
+                    {/* Imagen en lugar de icono - SIN fondo azul */}
                     <div className="relative p-8 pb-4">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <item.icon size={28} className="text-white" strokeWidth={2} />
+                      <div className="w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img 
+                          src={item.iconSrc} 
+                          alt={`${item.title} icon`}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       
                       <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
@@ -330,10 +335,14 @@ const InsuranceCategories = () => {
                   {/* Fondo sutil con colores de Avance */}
                   <div className="absolute inset-0 bg-gradient-to-br from-avance-lightblue/10 to-avance-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
-                  {/* Icono con colores de Avance */}
+                  {/* Imagen en lugar de icono - SIN fondo azul */}
                   <div className="relative p-8 pb-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-avance-blue to-avance-blue-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <item.icon size={28} className="text-white" strokeWidth={2} />
+                    <div className="w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <img 
+                        src={item.iconSrc} 
+                        alt={`${item.title} icon`}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     
                     <h3 className="mt-6 text-2xl font-bold text-avance-blue group-hover:text-avance-blue-dark transition-colors duration-300">
