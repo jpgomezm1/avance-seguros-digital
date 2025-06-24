@@ -52,27 +52,27 @@ const AboutUs = () => {
    {
      name: "Claudia Cifuentes",
      position: "Gerente",
-     image: "https://storage.googleapis.com/cluvi/Imagenes/persona1.png"
+     image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_A.webp"
    },
    {
      name: "Milena Salazar",
      position: "Directora Ejecutiva Comercial",
-     image: "https://storage.googleapis.com/cluvi/Imagenes/mujer1.png"
+     image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_B.webp"
    },
    {
      name: "Cristina Cano",
      position: "Ejecutiva Comercial",
-     image: "https://storage.googleapis.com/cluvi/Imagenes/persona2.png"
+     image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_A.webp"
    },
    {
      name: "Catalina Escobar",
      position: "Analista",
-     image: "https://storage.googleapis.com/cluvi/Imagenes/persona1.png"
+     image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_B.webp"
    },
    {
      name: "María Salazar",
      position: "Analista",
-     image: "https://storage.googleapis.com/cluvi/Imagenes/mujer1.png"
+     image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_A.webp"
    }
  ];
 

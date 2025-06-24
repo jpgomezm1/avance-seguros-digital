@@ -110,7 +110,7 @@ const ARLInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/arl.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_ARL.webp" 
                 alt="Riesgos laborales" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

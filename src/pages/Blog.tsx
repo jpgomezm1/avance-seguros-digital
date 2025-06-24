@@ -15,7 +15,7 @@ const Blog = () => {
       author: "Juan Pérez",
       readTime: "5 min",
       category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/car-insurance-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog11.png"
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Blog = () => {
       author: "Ana Gómez",
       readTime: "7 min",
       category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/health-insurance-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog12.png"
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const Blog = () => {
       author: "Carlos Martínez",
       readTime: "6 min",
       category: "Seguros Empresariales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/business-insurance-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog13.png"
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const Blog = () => {
       author: "María López",
       readTime: "8 min",
       category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/car-accident-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog14.png"
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ const Blog = () => {
       author: "Andrés Ramírez",
       readTime: "5 min",
       category: "Seguros Empresariales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/transport-insurance-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog15.png"
     },
     {
       id: 6,
@@ -65,7 +65,7 @@ const Blog = () => {
       author: "Laura Sánchez",
       readTime: "6 min",
       category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Imagenes/home-insurance-blog.png"
+      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog16.png"
     }
   ];
 

@@ -134,7 +134,7 @@ const AboutUs = () => {
               
               {/* Imagen con mejor manejo de escala */}
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/personal1.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Pagina%20principal%202_Foto%20p%C3%A1gina%20principal.webp" 
                 alt="Equipo Avance Seguros" 
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
               />

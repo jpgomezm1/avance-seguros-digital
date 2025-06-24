@@ -110,7 +110,7 @@ const TransportInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/trans.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_Transporte.webp" 
                 alt="Seguro de transporte" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

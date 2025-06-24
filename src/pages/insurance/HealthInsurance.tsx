@@ -106,7 +106,7 @@ const HealthInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/health.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_Salud.webp" 
                 alt="Seguro de salud" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

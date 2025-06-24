@@ -135,7 +135,7 @@ const CivilLiabilityInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/resp-civil.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_Responsabilidad%20civil.webp" 
                 alt="Responsabilidad Civil" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

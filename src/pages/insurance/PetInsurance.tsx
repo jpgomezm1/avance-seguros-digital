@@ -132,7 +132,7 @@ const PetInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/mascotas%20(2).png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_Mascotas.webp" 
                 alt="Seguro para mascotas" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

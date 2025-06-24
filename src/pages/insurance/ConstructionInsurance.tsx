@@ -135,7 +135,7 @@ const ConstructionInsurance = () => {
               className="hidden md:block"
             >
               <img 
-                src="https://storage.googleapis.com/cluvi/Imagenes/construccion.png" 
+                src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/SEGUROS_Todo%20riesgo%20construcci%C3%B3n.webp" 
                 alt="Seguro de construcción" 
                 className="max-w-full h-auto rounded-lg shadow-lg"
               />

@@ -245,7 +245,7 @@ const Hero = () => {
               {/* Contenedor de imagen con borde brillante */}
               <div className="relative rounded-2xl p-1 bg-gradient-to-tr from-avance-gold/30 via-white/20 to-transparent shadow-2xl overflow-hidden">
                 <img 
-                  src="https://storage.googleapis.com/cluvi/Imagenes/image_seguros.png" 
+                  src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/FOTO_Foto%20p%C3%A1gina%20principal.webp" 
                   alt="Familia protegida" 
                   className="relative z-10 rounded-xl w-full object-cover shadow-inner"
                 />
