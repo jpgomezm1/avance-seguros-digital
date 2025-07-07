@@ -33,18 +33,18 @@ const AutomobileInsurance = () => {
       icon: Shield
     },
     { 
-      title: "Daños Materiales", 
+      title: "Perdidas Parciales por daño o hurto", 
       description: "Cubre los daños a tu vehículo por colisión, volcadura o caída de objetos.",
       icon: CheckCircle
     },
     { 
-      title: "Robo Total", 
-      description: "Reembolso por el valor de tu vehículo en caso de robo completo.",
+      title: "Perdidas Totales por daño o hurto", 
+      description: "Indemnizacion del 100% del valor comercial de tu vehiculo",
       icon: AlertTriangle
     },
     { 
-      title: "Asistencia Vial", 
-      description: "Servicio de grúa, cambio de llanta, paso de corriente y más en caso de emergencia.",
+      title: "Asistencia", 
+      description: "Atencion 24/7 en caso de varada o accidente",
       icon: CheckCircle
     }
   ];
@@ -111,9 +111,7 @@ const AutomobileInsurance = () => {
           >
             <span className="inline-block bg-avance-blue/10 text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">PROTECCIÓN COMPLETA</span>
             <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">Coberturas que ofrecemos</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Diseñamos planes personalizados para que tengas la mejor protección al mejor precio.
-            </p>
+
           </motion.div>
 
           <motion.div 
@@ -146,13 +144,13 @@ const AutomobileInsurance = () => {
           <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg text-center">
             <h2 className="text-3xl font-bold text-avance-blue mb-4">¿Listo para proteger tu vehículo?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              En Avance Seguros te ayudamos a encontrar el seguro de automóvil que mejor se adapte a tus necesidades y presupuesto.
+              En Avance Seguros te presentamos soluciones que se adaptan a tus necesidades.
             </p>
             <Link 
               to="/cotizar?tipo=automovil" 
               className="bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
             >
-              Solicitar cotización gratis
+              Solicitar cotización
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

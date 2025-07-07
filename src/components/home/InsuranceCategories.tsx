@@ -139,14 +139,13 @@ const InsuranceCategories = () => {
             ✨ NUESTRAS SOLUCIONES
           </motion.span>
           <h2 className="text-5xl md:text-6xl font-bold mb-8 text-avance-blue leading-tight">
-            Seguros diseñados para{' '}
+          Seguros hechos a tu medida{' '}
             <span className="bg-gradient-to-r from-avance-gold to-avance-gold bg-clip-text text-transparent">
-              cada necesidad
+            para lo que más valoras
             </span>
           </h2>
           <p className="text-gray-600 text-xl leading-relaxed">
-            Ofrecemos una amplia gama de soluciones tanto para personas como para empresas, 
-            adaptadas a tus necesidades específicas y respaldadas por las mejores aseguradoras.
+          Desde proteger tu hogar o negocio, hasta cuidar de tu salud o familia. Diseñamos soluciones que se adaptan a tu vida y te respaldan cuando más lo necesitas.
           </p>
         </motion.div>
 

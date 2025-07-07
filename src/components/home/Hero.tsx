@@ -179,21 +179,15 @@ const Hero = () => {
             animate="visible"
             onAnimationComplete={() => setCountersVisible(true)}
           >
-            <motion.div 
-              variants={itemVariants}
-              className="inline-flex items-center bg-avance-gold/90 backdrop-blur-md text-white text-sm md:text-base px-5 py-2 rounded-full mb-7 font-medium shadow-lg border border-avance-gold/30"
-            >
-              <Clock size={16} className="mr-2 text-white animate-pulse" />
-              Más de 17 años protegiendo lo que más valoras
-            </motion.div>
+
             
             <motion.h1 
               variants={itemVariants}
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 lg:mb-8"
             >
-              <span className="block text-white">Protección que</span> 
+              <span className="block text-white">Avanzamos</span> 
               <span className="block bg-gradient-to-r from-avance-gold to-amber-400 bg-clip-text text-transparent drop-shadow-lg">
-                 Evoluciona contigo
+                 Contigo
               </span>
             </motion.h1>
             
@@ -201,11 +195,18 @@ const Hero = () => {
               variants={itemVariants}
               className="text-lg md:text-xl mb-8 lg:mb-10 text-white/95 max-w-2xl leading-relaxed"
             >
-              Ofrecemos soluciones de protección diseñadas para adaptarse a las diferentes etapas de tu vida, 
+              Desde 2008, acompañamos a personas y empresas ofreciendo
+soluciones integrales en protección, respaldados por las principales
+aseguradoras del país.
+ 
               <span className="relative inline-block font-medium">
-                <span className="text-avance-gold">  Nuestro compromiso es brindarte la cobertura que necesitas.</span>
+                <span className="text-avance-gold">  A través de nuestra experiencia y conocimiento del entorno
+empresarial,</span>
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-avance-gold/50"></span>
-              </span>  Porque sabemos que tu vida no es estática, y tu seguro tampoco debería serlo.
+              </span>  identificamos los retos de cada organización para
+diseñar un plan de manejo de riesgos que la haga más eficiente, más
+rentable y más competitiva.
+
             </motion.p>
             
             <motion.div 
@@ -216,7 +217,7 @@ const Hero = () => {
                 to="/cotizar" 
                 className="group relative overflow-hidden bg-gradient-to-r from-avance-gold to-amber-500 text-white rounded-xl px-8 py-4 font-medium text-center transition-all flex items-center justify-center shadow-lg hover:shadow-xl"
               >
-                <span className="relative z-10">Obtener cotización gratuita</span>
+                <span className="relative z-10">Solicitar cotización</span>
                 <div className="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -225,7 +226,7 @@ const Hero = () => {
                 to="/quienes-somos" 
                 className="group relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 rounded-xl px-8 py-4 font-medium transition-all text-center flex items-center justify-center shadow-md hover:shadow-lg"
               >
-                <span className="relative z-10">Descubre nuestra historia</span>
+                <span className="relative z-10">Descubrenós</span>
                 <ChevronRight className="ml-1 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
