@@ -17,33 +17,33 @@ const Testimonials = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Carlos Ramírez",
+      name: "David Londoño",
       role: "Empresario",
       image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_B.webp",
       quote: "Avance Seguros me ayudó a encontrar el paquete perfecto para mi empresa a un precio competitivo. Su servicio personalizado marcó la diferencia. Siempre están disponibles para resolver cualquier duda.",
       insurance: "Seguro para PYMES",
       rating: 5,
-      year: "2020"
+      year: "2015"
     },
     {
       id: 2,
-      name: "Ana Martínez",
-      role: "Médico",
+      name: "Santiago Gonzalez",
+      role: "Arquitecto",
       image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_A.webp",
       quote: "Después de comparar varias opciones, Avance me ofreció el mejor seguro de automóvil con una cobertura completa y un precio inmejorable. El proceso fue rápido y la atención excepcional.",
       insurance: "Seguro de Automóvil",
       rating: 5,
-      year: "2021"
+      year: "2012"
     },
     {
       id: 3,
-      name: "Luis Gómez",
-      role: "Padre de familia",
+      name: "Silvana Noriega",
+      role: "Madre de familia",
       image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_B.webp",
       quote: "La tranquilidad de tener a mi familia protegida con un seguro que realmente se ajusta a nuestras necesidades no tiene precio. Gracias Avance Seguros por su excelente asesoría y seguimiento.",
       insurance: "Seguro de Vida",
       rating: 5,
-      year: "2022"
+      year: "2008"
     }
   ];
 

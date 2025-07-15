@@ -217,10 +217,16 @@ const MobileMenu = ({ isOpen, onClose }) => {
           </ul>
           
           <div className="mt-6">
-            <Link to="/cotizar" className="block w-full py-3 px-4 bg-avance-gold text-white text-center font-medium rounded-lg shadow-md hover:bg-avance-gold/90 transition-colors" onClick={onClose}>
-              Cotizar Ahora
-            </Link>
-          </div>
+  <a 
+    href="https://avance-seguros-cotizaciones.netlify.app/" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full py-3 px-4 bg-avance-gold text-white text-center font-medium rounded-lg shadow-md hover:bg-avance-gold/90 transition-colors" 
+    onClick={onClose}
+  >
+    Cotizar Ahora
+  </a>
+</div>
         </nav>
       </div>
     </div>
@@ -262,6 +268,12 @@ const Header = () => {
       path: '/seguros/mascotas', 
       iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Mascotas.png', 
       description: 'Cuidado integral para tus mascotas' 
+    },
+    { 
+      label: 'Asistencia en Viajes', 
+      path: '/seguros/asistencia-viaje', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/asistencia_viajes.png', 
+      description: 'Protección completa para tus viajes' 
     }
   ];
   
@@ -301,6 +313,12 @@ const Header = () => {
       path: '/seguros/arl', 
       iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/ARL.png', 
       description: 'Protección laboral para tus empleados' 
+    },
+    { 
+      label: 'Ciberseguridad', 
+      path: '/seguros/ciberseguridad', 
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Cyberseguridad.png', 
+      description: 'Protección para tus sistemas informaticos' 
     }
   ];
   
@@ -373,10 +391,15 @@ const Header = () => {
               </li>
               
               <li className="ml-4">
-                <Link to="/cotizar" className="px-6 py-3 bg-avance-gold text-white font-medium rounded-lg shadow-sm hover:bg-avance-gold/90 transition-colors">
-                  Cotizar
-                </Link>
-              </li>
+  <a 
+    href="https://avance-seguros-cotizaciones.netlify.app/" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 bg-avance-gold text-white font-medium rounded-lg shadow-sm hover:bg-avance-gold/90 transition-colors"
+  >
+    Cotizar
+  </a>
+</li>
             </ul>
           </nav>
         </div>

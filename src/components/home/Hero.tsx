@@ -193,19 +193,14 @@ const Hero = () => {
             
             <motion.p 
               variants={itemVariants}
-              className="text-lg md:text-xl mb-8 lg:mb-10 text-white/95 max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl mb-8 lg:mb-10 text-white/95 max-w-2xl leading-relaxed text-justify"
             >
-              Desde 2008, acompañamos a personas y empresas ofreciendo
-soluciones integrales en protección, respaldados por las principales
-aseguradoras del país.
+              Desde 2008, acompañamos a personas y empresas ofreciendo soluciones integrales en protección, respaldados por las principales aseguradoras del país.
  
               <span className="relative inline-block font-medium">
-                <span className="text-avance-gold">  A través de nuestra experiencia y conocimiento del entorno
-empresarial,</span>
+                <span className="text-avance-gold"> Nuestra experiencia y conocimiento del entorno empresarial nos permite identificar los retos de cada organización para diseñar un plan de manejo de riesgos que la haga más eficiente, rentable y competitiva.</span>
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-avance-gold/50"></span>
-              </span>  identificamos los retos de cada organización para
-diseñar un plan de manejo de riesgos que la haga más eficiente, más
-rentable y más competitiva.
+              </span>  
 
             </motion.p>
             
@@ -213,20 +208,22 @@ rentable y más competitiva.
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-5 mb-16"
             >
-              <Link 
-                to="/cotizar" 
-                className="group relative overflow-hidden bg-gradient-to-r from-avance-gold to-amber-500 text-white rounded-xl px-8 py-4 font-medium text-center transition-all flex items-center justify-center shadow-lg hover:shadow-xl"
-              >
-                <span className="relative z-10">Solicitar cotización</span>
-                <div className="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative overflow-hidden bg-gradient-to-r from-avance-gold to-amber-500 text-white rounded-xl px-8 py-4 font-medium text-center transition-all flex items-center justify-center shadow-lg hover:shadow-xl"
+>
+  <span className="relative z-10">Solicitar cotización</span>
+  <div className="absolute inset-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+</a>
               
               <Link 
                 to="/quienes-somos" 
                 className="group relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 rounded-xl px-8 py-4 font-medium transition-all text-center flex items-center justify-center shadow-md hover:shadow-lg"
               >
-                <span className="relative z-10">Descubrenós</span>
+                <span className="relative z-10">Descúbrenos</span>
                 <ChevronRight className="ml-1 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>

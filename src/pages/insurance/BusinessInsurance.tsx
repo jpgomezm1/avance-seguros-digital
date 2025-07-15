@@ -43,7 +43,7 @@ const BusinessInsurance = () => {
       icon: AlertTriangle
     },
     { 
-      title: "Robo y hurto", 
+      title: "Robo", 
       description: "Protección ante robos de mercancías, equipos o dinero en efectivo.",
       icon: Briefcase
     },
@@ -53,8 +53,8 @@ const BusinessInsurance = () => {
       icon: LibrarySquare
     },
     { 
-      title: "Seguro para empleados", 
-      description: "Protección integral para tu equipo de trabajo y cumplimiento de obligaciones laborales.",
+      title: "Asistencia Empresarial", 
+      description: "En caso de emergencia, contar con linea de asistencia, para servicios de plomeria, cerrajeria, gas, vidrios rotos, entre otros",
       icon: FileText
     }
   ];
@@ -75,16 +75,18 @@ const BusinessInsurance = () => {
                 Seguro para <span className="text-avance-gold">PYMES</span>
               </h1>
               <p className="text-lg mb-8 max-w-xl">
-                Protege tu negocio ante imprevistos con soluciones de seguros diseñadas específicamente para pequeñas y medianas empresas.
+                Protege tu negocio ante imprevistos con soluciones de seguros diseñadas específicamente para empresas.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=pymes" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -150,98 +152,7 @@ const BusinessInsurance = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-16 bg-avance-lightblue">
-        <div className="container-custom">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block bg-white text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">SOLUCIONES POR SECTOR</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">Adaptado a tu industria</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Contamos con soluciones de seguros diseñadas específicamente para las necesidades de diferentes sectores empresariales.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-avance-gold"
-            >
-              <h3 className="text-xl font-semibold text-avance-blue mb-4">Comercio minorista</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Protección contra robo de mercancía</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Daños a instalaciones comerciales</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Responsabilidad ante clientes</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-avance-blue"
-            >
-              <h3 className="text-xl font-semibold text-avance-blue mb-4">Restaurantes y hostelería</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-blue mr-2"></div>
-                  <span>Seguro para equipamiento de cocina</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-blue mr-2"></div>
-                  <span>Cobertura por intoxicación alimentaria</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-blue mr-2"></div>
-                  <span>Pérdida de beneficios por cierre</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-avance-gold"
-            >
-              <h3 className="text-xl font-semibold text-avance-blue mb-4">Servicios profesionales</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Responsabilidad civil profesional</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Protección de datos y ciberriesgos</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-avance-gold mr-2"></div>
-                  <span>Seguro para equipos electrónicos</span>
-                </li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
@@ -251,13 +162,15 @@ const BusinessInsurance = () => {
             <p className="mb-8 max-w-2xl mx-auto text-white/90">
               En Avance Seguros contamos con asesores especializados en seguros para PYMES que te ayudarán a encontrar la protección ideal para tu negocio.
             </p>
-            <Link 
-              to="/cotizar?tipo=pymes" 
-              className="bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar asesoría personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

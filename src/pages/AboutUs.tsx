@@ -27,7 +27,7 @@ const AboutUs = () => {
  const values = [
    {
      title: "Confianza",
-     description: "Construimos relaciones duraderas basadas en la honestidad y transparencia con nuestros clientes.",
+     description: "Construimos relaciones duraderas basadas en la credibilidad de nuestros clientes.",
      icon: Users
    },
    {
@@ -56,7 +56,7 @@ const AboutUs = () => {
    },
    {
      name: "Milena Salazar",
-     position: "Directora Ejecutiva Comercial",
+     position: "Directora Integral",
      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/Fotos%20de%20perfil_B.webp"
    },
    {
@@ -113,7 +113,7 @@ const AboutUs = () => {
              <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-6">Una trayectoria dedicada a proteger lo que más quieres</h2>
              <div className="space-y-6 text-gray-600">
                <p>
-                 Fundada en el año 2008, Avance Seguros nació con la misión de transformar la manera en que las personas acceden a los seguros en Colombia. Nos dimos cuenta de que muchos clientes no encontraban opciones que realmente se adaptaran a sus necesidades específicas.
+                 Fundada en el año 2008, Avance Seguros nació con la misión de transformar la manera en que las personas acceden a los seguros en Colombia.
                </p>
                <p>
                  Más de 17 años de experiencia, que nos posicionan en la actualidad como un intermediario confiable y cercano a nuestros clientes. A lo largo de más de una década, hemos construido relaciones sólidas con las principales aseguradoras del mercado, lo que nos permite ofrecer condiciones preferenciales.
@@ -135,7 +135,7 @@ const AboutUs = () => {
            >
              <div className="rounded-xl overflow-hidden shadow-lg">
                <img 
-                 src="https://storage.googleapis.com/cluvi/Imagenes/about-us-team.png" 
+                 src="https://storage.googleapis.com/cluvi/Avance-Seguros/Web_Images/imagen_avance.png" 
                  alt="Equipo Avance Seguros" 
                  className="w-full h-auto object-cover"
                />

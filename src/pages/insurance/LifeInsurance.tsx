@@ -87,13 +87,15 @@ const LifeInsurance = () => {
                 Asegura la tranquilidad financiera de los que más quieres, incluso cuando ya no estés presente para cuidarlos.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=vida" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -276,13 +278,15 @@ const LifeInsurance = () => {
             <p className="mb-8 text-white/90">
               Un seguro de vida es más que una póliza, es una muestra de amor hacia tu familia. Asegura su bienestar financiero incluso cuando ya no estés.
             </p>
-            <Link 
-              to="/cotizar?tipo=vida" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar cotización personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
+>
+  Solicitar cotización personalizada
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

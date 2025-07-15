@@ -91,31 +91,13 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="font-semibold text-avance-blue text-lg">Horario de atención</h3>
                     <p className="text-gray-600">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Sábados: 9:00 AM - 12:00 PM</p>
                     </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 bg-avance-lightblue rounded-full flex items-center justify-center text-avance-blue flex-shrink-0 mt-1">
-                    <MessageSquare size={20} />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-avance-blue text-lg">Chat en línea</h3>
-                    <p className="text-gray-600">Disponible en horario de oficina</p>
-                  </div>
-                </div>
+    
               </div>
               
-              <div className="bg-avance-lightblue p-6 rounded-xl">
-                <h3 className="font-semibold text-avance-blue text-lg mb-3">¿Prefieres una visita presencial?</h3>
-                <p className="text-gray-600 mb-4">
-                  Te invitamos a visitar nuestras oficinas donde un asesor te atenderá personalmente.
-                </p>
-                <button className="text-avance-blue font-medium flex items-center">
-                  Ver ubicación en mapa
-                  <ArrowRight size={16} className="ml-2" />
-                </button>
-              </div>
+              
             </motion.div>
             
             {/* Contact Form */}

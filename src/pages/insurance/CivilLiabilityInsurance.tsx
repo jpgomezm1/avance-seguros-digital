@@ -80,7 +80,7 @@ const CivilLiabilityInsurance = () => {
     },
     {
       type: "Responsabilidad Profesional",
-      description: "Para profesionales independientes",
+      description: "Para profesiones como: Medicos, Odolotologos, Abogados, Contadores",
       features: ["Errores profesionales", "Omisiones", "Defensa jurídica"],
       minAmount: "$100 millones",
       color: "bg-blue-100 border-blue-200 text-blue-800"
@@ -113,13 +113,15 @@ const CivilLiabilityInsurance = () => {
                 Protégete ante cualquier eventualidad que pueda generar responsabilidades económicas por daños a terceros.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=responsabilidad-civil" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -269,13 +271,15 @@ const CivilLiabilityInsurance = () => {
               </div>
               
               <div className="mt-8">
-                <Link 
-                  to="/cotizar?tipo=responsabilidad-profesional" 
-                  className="inline-flex items-center px-6 py-3 bg-avance-blue text-white rounded-lg font-medium hover:bg-avance-blue/90 transition-colors"
-                >
-                  Cotizar responsabilidad profesional
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar Responsabiliad Profesional
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
               </div>
             </motion.div>
             <motion.div
@@ -323,7 +327,7 @@ const CivilLiabilityInsurance = () => {
                 <ShieldCheck size={28} />
               </div>
               <h3 className="text-lg font-semibold text-avance-blue mb-2">Amplia cobertura</h3>
-              <p className="text-sm text-gray-600">Desde $50 millones hasta $2.000 millones en sumas aseguradas.</p>
+              <p className="text-sm text-gray-600">Desde $100 millones en sumas aseguradas.</p>
             </motion.div>
             
             <motion.div 
@@ -379,13 +383,15 @@ const CivilLiabilityInsurance = () => {
             <p className="mb-8 text-white/90">
               No permitas que un accidente o error comprometa tu estabilidad económica. Con nuestro seguro de responsabilidad civil estarás protegido.
             </p>
-            <Link 
-              to="/cotizar?tipo=responsabilidad-civil" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar cotización personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

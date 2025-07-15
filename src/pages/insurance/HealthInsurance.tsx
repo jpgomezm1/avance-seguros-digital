@@ -84,20 +84,22 @@ const HealthInsurance = () => {
                 Protege lo más importante: tu salud y la de tu familia. Diseñamos planes personalizados que se adaptan a tus necesidades específicas.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=salud" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <a 
-                  href="#coverages" 
-                  className="btn-outline"
-                >
-                  Ver coberturas
-                </a>
-              </div>
+  <a 
+    href="https://avance-seguros-cotizaciones.netlify.app/" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-secondary flex items-center"
+  >
+    Cotizar ahora
+    <ArrowRight className="ml-2 h-5 w-5" />
+  </a>
+  <a 
+    href="#coverages" 
+    className="btn-outline"
+  >
+    Ver coberturas
+  </a>
+</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -202,13 +204,15 @@ const HealthInsurance = () => {
             <p className="mb-8 max-w-2xl mx-auto text-white/90">
               En Avance Seguros te ayudamos a encontrar el plan de salud que mejor se adapte a tus necesidades y presupuesto.
             </p>
-            <Link 
-              to="/cotizar?tipo=salud" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar asesoría personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
+>
+  Solicitar asesoría personalizada
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

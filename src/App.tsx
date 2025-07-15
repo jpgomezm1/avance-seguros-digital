@@ -13,6 +13,7 @@ import HealthInsurance from "./pages/insurance/HealthInsurance";
 import HomeInsurance from "./pages/insurance/HomeInsurance";
 import LifeInsurance from "./pages/insurance/LifeInsurance";
 import PetInsurance from "./pages/insurance/PetInsurance";
+import TravelAssistanceInsurance from "./pages/insurance/TravelAssistanceInsurance";
 
 // Import business insurance page components
 import BusinessInsurance from "./pages/insurance/BusinessInsurance";
@@ -21,6 +22,7 @@ import TransportInsurance from "./pages/insurance/TransportInsurance";
 import ARLInsurance from "./pages/insurance/ARLInsurance";
 import CivilLiabilityInsurance from "./pages/insurance/CivilLiabilityInsurance";
 import ConstructionInsurance from "./pages/insurance/ConstructionInsurance";
+import CybersecurityInsurance from "./pages/insurance/CybersecurityInsurance";
 
 // Import other page components
 import AboutUs from "./pages/AboutUs";
@@ -48,6 +50,7 @@ const App = () => (
           <Route path="/seguros/hogar" element={<HomeInsurance />} />
           <Route path="/seguros/vida" element={<LifeInsurance />} />
           <Route path="/seguros/mascotas" element={<PetInsurance />} />
+          <Route path="/seguros/asistencia-viaje" element={<TravelAssistanceInsurance />} />
           
           {/* Rutas de seguros empresariales */}
           <Route path="/seguros/pymes" element={<BusinessInsurance />} />
@@ -56,6 +59,7 @@ const App = () => (
           <Route path="/seguros/arl" element={<ARLInsurance />} />
           <Route path="/seguros/responsabilidad-civil" element={<CivilLiabilityInsurance />} />
           <Route path="/seguros/todo-riesgo-construccion" element={<ConstructionInsurance />} />
+          <Route path="/seguros/ciberseguridad" element={<CybersecurityInsurance />} />
           
           {/* Otras rutas */}
           <Route path="/quienes-somos" element={<AboutUs />} />

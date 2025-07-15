@@ -34,7 +34,7 @@ const InsuranceCategories = () => {
     {
       iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Autos.png',
       title: 'Movilidad',
-      path: '/seguros/movilidad',
+      path: '/seguros/automovil',
       description: 'Protección completa para tu vehículo',
       features: ['Responsabilidad civil', 'Daños a terceros', 'Asistencia en carretera']
     },
@@ -44,6 +44,13 @@ const InsuranceCategories = () => {
       path: '/seguros/mascotas',
       description: 'Cuidado integral para tus mascotas',
       features: ['Consultas veterinarias', 'Emergencias médicas', 'Cirugías']
+    },
+    {
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/asistencia_viajes.png',
+      title: 'Asistencia en Viaje',
+      path: '/seguros/asistencia-viaje',
+      description: 'Protección completa para tus viajes',
+      features: ['Asistencia 24/7', 'Cobertura médica', 'Equipaje protegido']
     }
   ];
 
@@ -51,7 +58,7 @@ const InsuranceCategories = () => {
     {
       iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Pymes.png',
       title: 'Corporativos y PYMES',
-      path: '/seguros/corporativos-pymes',
+      path: '/seguros/pymes',
       description: 'Protección integral para tu negocio',
       features: ['Multirriesgo empresarial', 'Pérdida de beneficios', 'RC patronal']
     },
@@ -68,6 +75,13 @@ const InsuranceCategories = () => {
       path: '/seguros/transporte',
       description: 'Seguridad para tus mercancías',
       features: ['Daños', 'Robo', 'Cobertura internacional']
+    },
+    {
+      iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Cyberseguridad.png',
+      title: 'Ciberseguridad',
+      path: '/seguros/ciberseguridad',
+      description: 'Protección para tus sistemas informáticos',
+      features: ['Protección de datos', 'Robo', 'Responsabilidad']
     },
     {
       iconSrc: 'https://storage.googleapis.com/cluvi/Avance-Seguros/Iconos/Todo_Riesgo.png',
@@ -256,9 +270,9 @@ const InsuranceCategories = () => {
               ))}
             </div>
 
-            {/* Segunda fila - 2 tarjetas centradas */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {personalInsurance.slice(3, 5).map((item, index) => (
+            {/* Segunda fila - 3 tarjetas */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {personalInsurance.slice(3, 6).map((item, index) => (
                 <motion.div 
                   key={index + 3} 
                   className="group"
@@ -402,13 +416,15 @@ const InsuranceCategories = () => {
                 Nuestros asesores expertos te ayudarán a encontrar la mejor opción que se adapte a tus necesidades específicas.
               </p>
               
-              <Link 
-                to="/cotizar" 
+              <a 
+                href="https://avance-seguros-cotizaciones.netlify.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-avance-gold to-avance-gold text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
               >
                 <span>Explorar todos nuestros seguros</span>
                 <ArrowRight size={20} className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

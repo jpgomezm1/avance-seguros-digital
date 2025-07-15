@@ -88,13 +88,15 @@ const TransportInsurance = () => {
                 Protege tus mercancías y productos durante el transporte, garantizando la continuidad de tu negocio ante imprevistos.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=transporte" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -287,13 +289,15 @@ const TransportInsurance = () => {
             <p className="mb-8 text-white/90">
               Asegura la continuidad de tu negocio con una póliza de transporte que te brinda cobertura ante cualquier imprevisto.
             </p>
-            <Link 
-              to="/cotizar?tipo=transporte" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar cotización personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

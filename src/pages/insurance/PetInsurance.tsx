@@ -110,13 +110,15 @@ const PetInsurance = () => {
                 Protege la salud y el bienestar de tu mascota con nuestro seguro integral. Porque ellos también son familia.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=mascotas" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -361,13 +363,15 @@ const PetInsurance = () => {
             <p className="mb-8 text-white/90">
               En Avance Seguros entendemos que tu mascota es parte de la familia. Por eso ofrecemos planes diseñados especialmente para su bienestar.
             </p>
-            <Link 
-              to="/cotizar?tipo=mascotas" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Proteger a mi mascota ahora
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
+>
+  Proteger a mi mascota ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

@@ -78,13 +78,15 @@ const HomeInsurance = () => {
                 Protege tu hogar y todo lo que hay en él con un seguro que te brinda tranquilidad frente a cualquier imprevisto.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=hogar" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -224,13 +226,15 @@ const HomeInsurance = () => {
             <p className="mb-8 max-w-2xl mx-auto text-white/90">
               En Avance Seguros te ayudamos a encontrar el seguro de hogar que mejor se adapte a tus necesidades y presupuesto.
             </p>
-            <Link 
-              to="/cotizar?tipo=hogar" 
-              className="bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar cotización gratuita
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
+>
+  Solicitar cotización gratuita
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

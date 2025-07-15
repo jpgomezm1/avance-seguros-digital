@@ -78,13 +78,15 @@ const ComplianceInsurance = () => {
                 Garantiza el cumplimiento de las obligaciones contractuales con pólizas diseñadas para diversos tipos de contratos y licitaciones.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=cumplimiento" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -119,7 +121,6 @@ const ComplianceInsurance = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block bg-avance-blue/10 text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">GARANTÍAS CONTRACTUALES</span>
             <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">Principales coberturas</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Los seguros de cumplimiento protegen a las partes involucradas en un contrato ante posibles incumplimientos.
@@ -160,7 +161,6 @@ const ComplianceInsurance = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block bg-white text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">AMPLIA COBERTURA</span>
             <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">Para todo tipo de contratos</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Diseñamos pólizas de cumplimiento ajustadas a los requisitos específicos de diferentes tipos de contratos.
@@ -257,13 +257,15 @@ const ComplianceInsurance = () => {
             <p className="mb-8 max-w-2xl mx-auto text-white/90">
               En Avance Seguros te asesoramos durante todo el proceso para encontrar la póliza que mejor se adapte a los requisitos de tu contrato.
             </p>
-            <Link 
-              to="/cotizar?tipo=cumplimiento" 
-              className="bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar asesoría personalizada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

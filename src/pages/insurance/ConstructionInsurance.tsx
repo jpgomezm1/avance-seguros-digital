@@ -113,13 +113,15 @@ const ConstructionInsurance = () => {
                 Protección integral para tus proyectos de construcción desde el inicio hasta el periodo de garantía.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  to="/cotizar?tipo=todo-riesgo-construccion" 
-                  className="btn-secondary flex items-center"
-                >
-                  Cotizar ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                 <a 
                   href="#coverages" 
                   className="btn-outline"
@@ -267,13 +269,15 @@ const ConstructionInsurance = () => {
               </div>
               
               <div className="mt-8">
-                <Link 
-                  to="/cotizar?tipo=todo-riesgo-construccion" 
-                  className="inline-flex items-center px-6 py-3 bg-avance-blue text-white rounded-lg font-medium hover:bg-avance-blue/90 transition-colors"
-                >
-                  Cotizar mi proyecto
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar mi proyecto
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
               </div>
             </motion.div>
             <motion.div
@@ -370,73 +374,7 @@ const ConstructionInsurance = () => {
       </section>
 
       {/* Coverage Details Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block bg-avance-blue/10 text-avance-blue font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">DETALLES DE COBERTURA</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-avance-blue mb-4">¿Qué riesgos cubrimos?</h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-gray-50 p-6 rounded-xl"
-            >
-              <h3 className="text-lg font-semibold text-avance-blue mb-3">Riesgos Naturales</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Incendio y explosión</li>
-                <li>• Terremoto y temblor</li>
-                <li>• Inundación y desbordamiento</li>
-                <li>• Vendaval y granizo</li>
-                <li>• Rayo</li>
-              </ul>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-50 p-6 rounded-xl"
-            >
-              <h3 className="text-lg font-semibold text-avance-blue mb-3">Riesgos Humanos</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Hurto calificado</li>
-                <li>• Actos malintencionados</li>
-                <li>• Huelgas y motines</li>
-                <li>• Terrorismo</li>
-                <li>• Sabotaje</li>
-              </ul>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-50 p-6 rounded-xl"
-            >
-              <h3 className="text-lg font-semibold text-avance-blue mb-3">Riesgos Técnicos</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Errores de diseño</li>
-                <li>• Materiales defectuosos</li>
-                <li>• Mano de obra deficiente</li>
-                <li>• Falla de maquinaria</li>
-                <li>• Colapso estructural</li>
-              </ul>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* CTA Section */}
       <section className="py-16 bg-avance-blue text-white">
@@ -446,13 +384,15 @@ const ConstructionInsurance = () => {
             <p className="mb-8 text-white/90">
               No dejes tu proyecto al azar. Con nuestro seguro Todo Riesgo Construcción tendrás la tranquilidad de saber que tu inversión está protegida.
             </p>
-            <Link 
-              to="/cotizar?tipo=todo-riesgo-construccion" 
-              className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
-            >
-              Solicitar cotización especializada
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <a 
+  href="https://avance-seguros-cotizaciones.netlify.app/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary flex items-center"
+>
+  Cotizar ahora
+  <ArrowRight className="ml-2 h-5 w-5" />
+</a>
           </div>
         </div>
       </section>

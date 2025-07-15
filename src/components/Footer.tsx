@@ -82,7 +82,9 @@ const Footer = () => {
           {/* Columna derecha - Botón de cotización */}
           <div className="flex flex-col justify-center">
             <a 
-              href="/cotizar" 
+               href="https://avance-seguros-cotizaciones.netlify.app/" 
+               target="_blank"
+               rel="noopener noreferrer"
               className="bg-[#C69C3F] hover:bg-[#C69C3F]/90 text-white text-center px-6 py-3 rounded-lg font-medium transition-all"
             >
               Cotizar ahora

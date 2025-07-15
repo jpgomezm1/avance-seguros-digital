@@ -83,7 +83,7 @@ const AboutUs = () => {
               variants={itemVariants}
               className="text-gray-700 mb-8 text-lg leading-relaxed"
             >
-              En Avance Seguros utilizamos la información y necesidades de nuestros clientes para obtener la mejor opción del mercado y establecer comparativos que brinden productos verdaderamente personalizados.
+              En Avance Seguros identificamos las necesidades de nuestros clientes para obtener la mejor opción del mercado.
             </motion.p>
             
             <motion.div 
