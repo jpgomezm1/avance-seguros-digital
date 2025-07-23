@@ -69,7 +69,7 @@ const AutomobileInsurance = () => {
     {
       icon: CreditCard,
       title: "Flexibilidad de pago",
-      description: "Plazos desde 12 hasta 84 meses adaptados a tu capacidad"
+      description: "Plazos desde 12 hasta 72 meses adaptados a tu capacidad"
     }
   ];
 
@@ -237,7 +237,7 @@ const AutomobileInsurance = () => {
                       $500.000.000
                     </div>
                     <p className="text-sm opacity-90">
-                      Con plazos flexibles hasta 84 meses
+                      Con plazos flexibles hasta 72 meses
                     </p>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ const AutomobileInsurance = () => {
               <div className="absolute -top-4 -right-4 bg-avance-gold text-white px-6 py-3 rounded-full shadow-lg">
                 <div className="text-center">
                   <div className="text-sm font-medium">Tasa desde</div>
-                  <div className="text-xl font-bold">1.2% M.V.</div>
+                  <div className="text-xl font-bold">1.0% M.V.</div>
                 </div>
               </div>
             </motion.div>
@@ -275,8 +275,8 @@ const AutomobileInsurance = () => {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-center">
-                <div className="text-2xl font-bold text-avance-blue mb-2">Sin codeudor</div>
-                <p className="text-gray-600 text-sm">Opciones disponibles según tu perfil crediticio</p>
+                <div className="text-2xl font-bold text-avance-blue mb-2">Nuestros Aliados</div>
+                <p className="text-gray-600 text-sm">Sufi, Banco de Bogota, Finandina, Banco de Occidente</p>
               </div>
             </div>
           </motion.div>
