@@ -42,7 +42,7 @@ const InsurancePartners = () => {
     {
       name: "Seguros Mundial",
       logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_mundial.jpg",
-      desc: "Soluciones especializadas para empresas y profesionales independientes.",
+      desc: "Soluciones especializadas para empresas y personas.",
       color: "#5D2967"
     },
     {
