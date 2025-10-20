@@ -110,8 +110,8 @@ const TravelAssistanceInsurance = () => {
                 Nuestra asistencia en viaje te acompaña 24/7 dondequiera que vayas.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href="https://avance-seguros-cotizaciones.netlify.app/" 
+                <a
+                  href="https://wa.me/573108483562?text=Estoy%20interesado%20en%20un%20seguro%20para%20asistencia%20en%20viaje..."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-avance-gold text-white font-medium rounded-lg shadow-sm hover:bg-avance-gold/90 transition-colors"
@@ -119,8 +119,8 @@ const TravelAssistanceInsurance = () => {
                   Cotizar ahora
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
-                <a 
-                  href="#coverages" 
+                <a
+                  href="#coverages"
                   className="btn-outline"
                 >
                   Ver coberturas
@@ -507,8 +507,8 @@ const TravelAssistanceInsurance = () => {
               No dejes que los imprevistos arruinen tu viaje. Con nuestra asistencia en viaje tienes la tranquilidad 
               de contar con apoyo profesional las 24 horas del día.
             </p>
-            <a 
-              href="https://avance-seguros-cotizaciones.netlify.app/" 
+            <a
+              href="https://wa.me/573108483562?text=Estoy%20interesado%20en%20un%20seguro%20para%20asistencia%20en%20viaje..."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-avance-gold hover:bg-avance-gold-light text-white rounded-lg px-8 py-4 font-medium inline-flex items-center"
