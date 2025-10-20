@@ -201,8 +201,8 @@ const AutomobileInsurance = () => {
                 ))}
               </div>
 
-              <a 
-                href="https://avance-seguros-cotizaciones.netlify.app/" 
+              <a
+                href="https://wa.me/573108483562?text=Estoy%20interesado%20en%20cr%C3%A9dito%20vehicular..."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg px-6 py-3 font-medium transition-colors"
@@ -302,8 +302,8 @@ const AutomobileInsurance = () => {
                 Cotizar seguro
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a 
-                href="https://avance-seguros-cotizaciones.netlify.app/" 
+              <a
+                href="https://wa.me/573108483562?text=Estoy%20interesado%20en%20cr%C3%A9dito%20vehicular..."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-avance-blue text-white font-medium rounded-lg shadow-sm hover:bg-avance-blue/90 transition-colors"

@@ -181,12 +181,12 @@ const Hero = () => {
           >
 
             
-            <motion.h1 
+            <motion.h1
               variants={itemVariants}
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 lg:mb-8"
             >
-              <span className="block text-white">Avanzamos</span> 
-              <span className="block bg-gradient-to-r from-avance-gold to-amber-400 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="block text-white">Avanzamos</span>
+              <span className="block bg-gradient-to-r from-avance-gold to-amber-400 bg-clip-text text-transparent drop-shadow-lg pb-2">
                  Contigo
               </span>
             </motion.h1>
