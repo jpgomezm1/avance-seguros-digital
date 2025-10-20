@@ -6,11 +6,11 @@ const Footer = () => {
   
   // Datos simplificados para los enlaces principales
   const mainLinks = [
-    { title: 'Seguros Personales', path: '/seguros-personales' },
-    { title: 'Seguros Empresariales', path: '/seguros-empresariales' },
-    { title: 'Quiénes Somos', path: '/quienes-somos' },
-    { title: 'Blog', path: '/blog' },
-    { title: 'Contacto', path: '/contacto' },
+    { title: 'Seguros Personales', path: 'https://avance-seguros-cotizaciones.netlify.app/', external: true },
+    { title: 'Seguros Empresariales', path: 'https://avance-seguros-cotizaciones.netlify.app/', external: true },
+    { title: 'Quiénes Somos', path: '/quienes-somos', external: false },
+    { title: 'Blog', path: '/blog', external: false },
+    { title: 'Contacto', path: '/contacto', external: false },
   ];
   
   // Logos de aseguradoras
@@ -52,9 +52,20 @@ const Footer = () => {
             <ul className="space-y-2">
               {mainLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path} className="text-white/70 hover:text-white transition-colors text-sm">
-                    {link.title}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-white transition-colors text-sm"
+                    >
+                      {link.title}
+                    </a>
+                  ) : (
+                    <Link to={link.path} className="text-white/70 hover:text-white transition-colors text-sm">
+                      {link.title}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

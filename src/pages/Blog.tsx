@@ -3,72 +3,9 @@ import BaseLayout from '@/components/layouts/BaseLayout';
 import { Calendar, User, ArrowRight, Clock, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { blogPosts, getRecentPosts } from '@/data/blogPosts';
 
 const Blog = () => {
-  // Mock blog posts data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "¿Por qué es importante tener un seguro para tu automóvil?",
-      excerpt: "Descubre las razones por las cuales contar con un seguro de automóvil es fundamental para proteger tu patrimonio y garantizar tu tranquilidad en la vía.",
-      date: "15 mayo, 2025",
-      author: "Juan Pérez",
-      readTime: "5 min",
-      category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog11.png"
-    },
-    {
-      id: 2,
-      title: "5 claves para elegir el seguro de salud perfecto para tu familia",
-      excerpt: "Te compartimos los aspectos más importantes que debes considerar a la hora de seleccionar un seguro de salud que se adapte a las necesidades específicas de tu familia.",
-      date: "3 mayo, 2025",
-      author: "Ana Gómez",
-      readTime: "7 min",
-      category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog12.png"
-    },
-    {
-      id: 3,
-      title: "Seguros para PYMES: Protege tu negocio ante imprevistos",
-      excerpt: "Las pequeñas y medianas empresas enfrentan diversos riesgos que pueden impactar negativamente su operación. Conoce cómo un seguro integral puede ayudarte a mitigarlos.",
-      date: "28 abril, 2025",
-      author: "Carlos Martínez",
-      readTime: "6 min",
-      category: "Seguros Empresariales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog13.png"
-    },
-    {
-      id: 4,
-      title: "¿Qué hacer en caso de un siniestro con tu vehículo?",
-      excerpt: "Guía paso a paso sobre cómo actuar correctamente ante un accidente automovilístico para garantizar una gestión eficiente de tu reclamación.",
-      date: "20 abril, 2025",
-      author: "María López",
-      readTime: "8 min",
-      category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog14.png"
-    },
-    {
-      id: 5,
-      title: "Seguros de transporte: Factores clave para la protección de mercancías",
-      excerpt: "El transporte de mercancías implica riesgos significativos. Conoce cómo un seguro especializado puede proteger tu carga durante todo el trayecto.",
-      date: "12 abril, 2025",
-      author: "Andrés Ramírez",
-      readTime: "5 min",
-      category: "Seguros Empresariales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog15.png"
-    },
-    {
-      id: 6,
-      title: "Cómo elegir la cobertura ideal para tu hogar",
-      excerpt: "Proteger tu vivienda es fundamental. Te explicamos los diferentes tipos de cobertura disponibles para que elijas la que mejor se adapte a tus necesidades.",
-      date: "5 abril, 2025",
-      author: "Laura Sánchez",
-      readTime: "6 min",
-      category: "Seguros Personales",
-      image: "https://storage.googleapis.com/cluvi/Avance-Seguros/Blog_Images/blog16.png"
-    }
-  ];
-
   // Categories
   const categories = [
     "Todos",
@@ -79,7 +16,7 @@ const Blog = () => {
   ];
 
   // Recent posts (for sidebar)
-  const recentPosts = blogPosts.slice(0, 3);
+  const recentPosts = getRecentPosts(3);
 
   return (
     <BaseLayout>
@@ -171,13 +108,13 @@ const Blog = () => {
                           <User size={14} className="mr-1" />
                           <span>{post.author}</span>
                         </div>
-                        <a 
-                          href={`/blog/${post.id}`} 
+                        <Link
+                          to={`/blog/${post.slug}`}
                           className="text-avance-blue font-medium text-sm flex items-center hover:text-avance-gold transition-colors"
                         >
                           Leer más
                           <ArrowRight size={14} className="ml-1" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </motion.article>
@@ -243,9 +180,9 @@ const Blog = () => {
                       </div>
                       <div>
                         <h4 className="font-medium text-avance-blue line-clamp-2 mb-1 text-sm">
-                          <a href={`/blog/${post.id}`} className="hover:text-avance-gold transition-colors">
+                          <Link to={`/blog/${post.slug}`} className="hover:text-avance-gold transition-colors">
                             {post.title}
-                          </a>
+                          </Link>
                         </h4>
                         <div className="flex items-center text-gray-500 text-xs">
                           <Calendar size={12} className="mr-1" />
@@ -254,24 +191,6 @@ const Blog = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-              
-              {/* Newsletter Widget */}
-              <div className="bg-avance-blue text-white p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-4">Suscríbete a nuestro newsletter</h3>
-                <p className="text-white/90 text-sm mb-4">
-                  Recibe nuestros artículos, novedades y consejos directamente en tu correo.
-                </p>
-                <div className="space-y-3">
-                  <input 
-                    type="email" 
-                    placeholder="Tu correo electrónico" 
-                    className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-avance-gold"
-                  />
-                  <button className="w-full bg-avance-gold hover:bg-avance-gold/90 text-white rounded-lg py-2.5 font-medium transition-colors">
-                    Suscribirme
-                  </button>
                 </div>
               </div>
             </div>

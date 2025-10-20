@@ -27,6 +27,7 @@ import CybersecurityInsurance from "./pages/insurance/CybersecurityInsurance";
 // Import other page components
 import AboutUs from "./pages/AboutUs";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import QuoteRequest from "./pages/QuoteRequest";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -64,6 +65,7 @@ const App = () => (
           {/* Otras rutas */}
           <Route path="/quienes-somos" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/cotizar" element={<QuoteRequest />} />
           <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
