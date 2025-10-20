@@ -15,35 +15,53 @@ const InsurancePartners = () => {
   const [activePartner, setActivePartner] = useState(0);
   
   const partners = [
-    { 
-      name: "Seguros Sura", 
+    {
+      name: "Seguros Sura",
       logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_sura.jpg",
       desc: "Líder en innovación con soluciones digitales que simplifican la gestión de seguros.",
       color: "#00529B"
     },
-    { 
-      name: "Seguros Bolivar", 
+    {
+      name: "Seguros Bolivar",
       logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_bolivar.jpg",
       desc: "Más de 70 años de experiencia respaldando a las familias y empresas colombianas.",
       color: "#e4002b"
     },
-    { 
-      name: "Allianz", 
+    {
+      name: "Allianz",
       logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_allianz.jpg",
       desc: "Presencia global con soluciones locales adaptadas al mercado colombiano.",
       color: "#003781"
     },
-    { 
-      name: "Liberty Seguros", 
-      logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_liberty.jpg",
-      desc: "Especialistas en seguros de automóvil con las coberturas más completas del mercado.",
-      color: "#006949"
+    {
+      name: "HDI Seguros",
+      logo: "https://storage.googleapis.com/cluvi/Web_Avance/logo_hdi.webp",
+      desc: "Respaldo internacional con coberturas innovadoras y atención especializada.",
+      color: "#005AA0"
     },
-    { 
-      name: "Seguros Mundial", 
+    {
+      name: "Seguros Mundial",
       logo: "https://storage.googleapis.com/cluvi/Imagenes/logo_mundial.jpg",
       desc: "Soluciones especializadas para empresas y profesionales independientes.",
       color: "#5D2967"
+    },
+    {
+      name: "SBS Seguros",
+      logo: "https://storage.googleapis.com/cluvi/Web_Avance/logo_sbs.webp",
+      desc: "Soluciones integrales de seguros con amplia cobertura y atención personalizada.",
+      color: "#E30613"
+    },
+    {
+      name: "Coomeva",
+      logo: "https://storage.googleapis.com/cluvi/Web_Avance/logo_coomeva.png",
+      desc: "Experiencia cooperativa brindando protección y bienestar a las familias colombianas.",
+      color: "#00A859"
+    },
+    {
+      name: "Seguros Solidaria",
+      logo: "https://storage.googleapis.com/cluvi/Web_Avance/logo_solidaria.png",
+      desc: "Compromiso social con seguros accesibles y coberturas diseñadas para todos.",
+      color: "#F15A29"
     }
   ];
   

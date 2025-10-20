@@ -15,7 +15,7 @@ const Footer = () => {
   
   // Logos de aseguradoras
   const partners = [
-    'Sura', 'Bolivar', 'Allianz', 'Liberty', 'Mundial'
+    'Sura', 'Bolivar', 'Allianz', 'HDI', 'Mundial', 'SBS', 'Coomeva', 'Solidaria'
   ];
 
   return (

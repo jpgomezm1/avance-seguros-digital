@@ -314,10 +314,151 @@ const TravelAssistanceInsurance = () => {
         </div>
       </section>
 
+      {/* Assist Card Section */}
+      <section className="py-16 bg-gradient-to-br from-[#0A4958] via-[#0A4958]/95 to-[#0A4958]/90 text-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C69C3F]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C69C3F]/10 rounded-full blur-3xl"></div>
+
+        <div className="container-custom relative z-10">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block bg-[#C69C3F] text-white font-semibold mb-4 px-4 py-1.5 rounded-full text-sm">ALIADO ESTRATÉGICO</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Powered by Assist Card</h2>
+            <p className="text-white/90 max-w-2xl mx-auto text-justify">
+              En alianza con Assist Card, líder mundial en asistencia al viajero, te ofrecemos la mejor protección
+              con cobertura en más de 190 países y atención en tu idioma las 24 horas del día.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+            {/* Left side - Key features */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-[#C69C3F] rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                    <Globe size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Cobertura Global</h3>
+                    <p className="text-white/80 text-sm">
+                      Más de 190 países con red de clínicas y hospitales de primer nivel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-[#C69C3F] rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Atención Inmediata</h3>
+                    <p className="text-white/80 text-sm">
+                      Central de asistencia disponible 24/7 en español y múltiples idiomas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-[#C69C3F] rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                    <Shield size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">50 Años de Experiencia</h3>
+                    <p className="text-white/80 text-sm">
+                      Respaldo de una empresa líder con medio siglo protegiendo viajeros.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right side - Plans */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-4"
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-[#0A4958] mb-2">Planes Assist Card</h3>
+                  <p className="text-gray-600 text-sm">Opciones adaptadas a tu tipo de viaje</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="border-l-4 border-[#C69C3F] pl-4 py-2">
+                    <h4 className="font-bold text-[#0A4958] mb-1">AC 35</h4>
+                    <p className="text-sm text-gray-600">Ideal para viajes cortos en Latinoamérica</p>
+                    <p className="text-xs text-[#C69C3F] font-semibold mt-1">Desde $35.000/día</p>
+                  </div>
+
+                  <div className="border-l-4 border-[#C69C3F] pl-4 py-2">
+                    <h4 className="font-bold text-[#0A4958] mb-1">AC 60</h4>
+                    <p className="text-sm text-gray-600">Perfecto para Europa y América del Norte</p>
+                    <p className="text-xs text-[#C69C3F] font-semibold mt-1">Desde $60.000/día</p>
+                  </div>
+
+                  <div className="border-l-4 border-[#C69C3F] pl-4 py-2">
+                    <h4 className="font-bold text-[#0A4958] mb-1">AC 150</h4>
+                    <p className="text-sm text-gray-600">Máxima cobertura para destinos exigentes</p>
+                    <p className="text-xs text-[#C69C3F] font-semibold mt-1">Desde $150.000/día</p>
+                  </div>
+
+                  <div className="bg-[#0A4958]/5 rounded-lg p-4 mt-6">
+                    <div className="flex items-center text-[#0A4958]">
+                      <Heart size={20} className="mr-2 text-[#C69C3F]" />
+                      <p className="text-sm font-medium">Incluye asistencia médica, equipaje, cancelación y más</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom stats */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {[
+              { value: "190+", label: "Países con cobertura" },
+              { value: "24/7", label: "Atención ininterrumpida" },
+              { value: "50+", label: "Años de experiencia" },
+              { value: "5M+", label: "Viajeros protegidos" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[#C69C3F] mb-2">{stat.value}</div>
+                <div className="text-sm text-white/80">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Process Section */}
       <section className="py-16 bg-avance-lightblue">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +479,7 @@ const TravelAssistanceInsurance = () => {
               { number: "03", title: "Recibe asistencia", description: "Nuestro equipo coordina la ayuda que necesitas" },
               { number: "04", title: "Disfruta tranquilo", description: "Continúa tu viaje con la seguridad de estar protegido" }
             ].map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
